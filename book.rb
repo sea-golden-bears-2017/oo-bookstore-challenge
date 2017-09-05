@@ -1,7 +1,7 @@
 class Book
 
   attr_reader :title, :author, :genre, :price,
-              :quantity, :isbn, :format, :condition,
+              :quantity, :isbn, :style, :condition,
               :cost, :publisher
 
   def initialize(options)
@@ -11,7 +11,7 @@ class Book
     @price = options[:price].to_f
     @quantity = options[:count].to_i
     @isbn = options[:isbn]
-    @format = ["Hard Cover", "Paperback"].sample
+    @style = ["Hard Cover", "Paperback"].sample
     @condition = options[:condition] || "New"
     @cost = @price * 0.5
     @publisher = options[:publisher] || "Self-published: #{@author}"
