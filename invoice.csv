@@ -1,0 +1,101 @@
+id,title,author,genre,price,count,isbn
+1,Waiting for the Barbarians,Mr. Mylene Daniel,Realistic fiction,93.46,13,0-706-340280-3
+2,Arms and the Man,Dr. Ian Bruen,Folklore,17.7,28,0-963-963740-0
+3,Rosemary Sutcliff,Olen Kerluke,Fiction narrative,77.05,28,0-332-886357-0
+4,Infinite Jest,Ms. Murray Schmidt,Historical fiction,61.4,19,0-725-249970-4
+5,The Way Through the Woods,Ettie Buckridge,Mystery,28.13,1,0-845-286882-3
+6,A Handful of Dust,Tyson Medhurst,Fantasy,90.02,9,0-498-362634-9
+7,The Widening Gyre,Berenice Bins,Fantasy,18.29,22,0-459-346500-7
+8,Tirra Lirra by the River,Mr. Evalyn Rosenbaum,Textbook,48.35,15,0-946-401306-3
+9,Infinite Jest,Dedrick Blick,Legend,65.51,8,0-976-651329-3
+10,The Moving Toyshop,Maegan Moore,Historical fiction,24.86,3,0-646-300906-5
+11,The Curious Incident of the Dog in the Night-Time,Louie Waters II,Biography/Autobiography,22.6,30,0-333-457735-0
+12,The Man Within,Watson Ferry,Suspense/Thriller,20.44,30,0-776-300733-1
+13,Bury My Heart at Wounded Knee,Darrel Rutherford,Tall tale,90.55,21,0-475-804456-9
+14,Shall not Perish,Coy Romaguera,Reference book,85.96,1,0-586-242214-3
+15,Where Angels Fear to Tread,Emory Turner V,Western,38.34,17,0-775-126416-0
+16,The Daffodil Sky,Heath Littel,Humor,68.98,16,0-282-464467-9
+17,An Evil Cradling,Elza Hauck,Historical fiction,67.28,29,0-938-676049-1
+18,Cabbages and Kings,Leanna Watsica,Comic/Graphic Novel,13.92,23,0-461-472082-0
+19,The Golden Apples of the Sun,Dr. Olga Casper,Tall tale,13.5,18,0-374-703218-9
+20,An Acceptable Time,Clint Altenwerth,Science fiction,49.13,5,0-299-181817-4
+21,No Longer at Ease,Lila Murphy II,Tall tale,94.72,9,0-328-831634-8
+22,Nine Coaches Waiting,Dr. Garry Watsica,Narrative nonfiction,0.18,14,0-598-641596-3
+23,In a Glass Darkly,Madisen Mayert,Fiction narrative,5.53,11,0-758-488813-9
+24,Sleep the Brave,Dr. Wayne Wehner,Suspense/Thriller,82.29,7,0-356-253946-7
+25,To Sail Beyond the Sunset,Vicente Donnelly,Fiction in verse,53.06,11,0-880-829562-1
+26,"Alone on a Wide, Wide Sea",Kade Labadie,Crime/Detective,68.02,12,0-679-344926-1
+27,The Green Bay Tree,Peggie Torphy,Tall tale,22.68,13,0-981-932406-7
+28,That Good Night,Roy Miller,Narrative nonfiction,92.81,16,0-285-665593-2
+29,In Death Ground,Maxine Dooley,Narrative nonfiction,22.78,18,0-475-619851-7
+30,I Sing the Body Electric,Verlie Reilly,Fable,24.86,6,0-205-522139-1
+31,The Golden Bowl,Moshe Trantow,Fantasy,96.13,5,0-627-905289-3
+32,East of Eden,Lolita Lueilwitz,Textbook,77.51,20,0-480-408552-8
+33,Cover Her Face,Mrs. Johnny Jerde,Mythology,22.89,22,0-236-669348-9
+34,Dying of the Light,Tod Stroman,Historical fiction,52.73,27,0-385-813143-6
+35,The Way of All Flesh,Andreane Monahan IV,Biography/Autobiography,15.55,28,0-472-474139-5
+36,The Torment of Others,Maddison Oberbrunner Jr.,Metafiction,88.61,10,0-308-796188-2
+37,"If Not Now, When?",Frederique Sauer,Folklore,11.1,27,0-120-119696-9
+38,No Highway,Reilly Kovacek,Metafiction,73.2,2,0-475-917697-2
+39,Beyond the Mexique Bay,Dr. Maurice Konopelski,Narrative nonfiction,56.56,26,0-464-469013-7
+40,Vanity Fair,Jaylin Jacobs,Reference book,99.46,28,0-220-615323-8
+41,O Jerusalem!,Nicolas Kiehn,Horror,42.86,9,0-676-256312-1
+42,"Such, Such Were the Joys",Edmond Grimes,Narrative nonfiction,66.8,27,0-932-257858-5
+43,Precious Bane,Mack Abbott,Reference book,85.89,18,0-618-870472-2
+44,A Time of Gifts,Braulio Fritsch,Fairy tale,45.44,1,0-667-864535-9
+45,All Passion Spent,Leonie Schuster Sr.,Mythology,30.62,1,0-336-463247-6
+46,The Glory and the Dream,Kirk Stehr,Legend,98.62,10,0-384-779811-4
+47,The Waste Land,Delores Altenwerth,Mythology,44.9,26,0-445-525238-9
+48,Number the Stars,Chaim Runolfsdottir,Essay,83.13,13,0-765-810837-4
+49,No Country for Old Men,Wilber Durgan,Legend,73.54,12,0-161-387166-9
+50,Eyeless in Gaza,Dr. Henri Murazik,Comic/Graphic Novel,35.48,9,0-124-696556-3
+51,Arms and the Man,Emile Goldner Jr.,Crime/Detective,76.63,23,0-683-967589-1
+52,Death Be Not Proud,Miss Alvera Lemke,Classic,35.69,29,0-647-569371-8
+53,The Waste Land,Fletcher Bogan,Comic/Graphic Novel,54.18,25,0-611-245417-5
+54,Stranger in a Strange Land,Isabell Herman II,Fable,22.08,7,0-772-241577-9
+55,Jesting Pilate,Rebekah Larson,Fiction in verse,38.94,14,0-184-160911-3
+56,Let Us Now Praise Famous Men,Demetrius Wisoky II,Fable,29.17,12,0-320-263498-3
+57,The Way of All Flesh,Lexie Sporer,Mythopoeia,70.13,3,0-373-255870-5
+58,Noli Me Tangere,Brock Spencer,Humor,75.76,2,0-554-836208-4
+59,No Longer at Ease,Simeon Luettgen,Fiction in verse,33.7,16,0-345-778034-4
+60,Behold the Man,Miss Aditya Konopelski,Historical fiction,73.8,24,0-891-651986-3
+61,Beyond the Mexique Bay,Cali Feil,Biography/Autobiography,8.4,16,0-584-466788-4
+62,His Dark Materials,Sandrine Hermann,Fairy tale,80.26,20,0-132-909131-1
+63,Cabbages and Kings,Pearline Goldner,Textbook,81.79,24,0-688-259681-3
+64,An Acceptable Time,Maegan Schiller Jr.,Science fiction,91.75,24,0-296-181513-7
+65,Great Work of Time,Mary Osinski,Mythology,47.55,30,0-920-760138-6
+66,Stranger in a Strange Land,Eryn Dibbert,Fantasy,9.59,13,0-921-658206-7
+67,Dance Dance Dance,Kelvin Corwin,Classic,58.18,7,0-222-360103-0
+68,The Golden Apples of the Sun,Dr. Nina Rempel,Fanfiction,55.38,22,0-910-361888-2
+69,The Lathe of Heaven,Ursula Dibbert,Fiction narrative,40.44,16,0-600-479204-8
+70,The Skull Beneath the Skin,Ida Lynch,Fairy tale,69.88,6,0-127-195079-0
+71,The Little Foxes,Berenice Emmerich,Science fiction,97.69,14,0-577-944557-0
+72,Waiting for the Barbarians,Mozelle Lakin,Fairy tale,21.41,13,0-584-827908-7
+73,Tender Is the Night,Ms. Ellie Rosenbaum,Textbook,81.89,2,0-269-795137-5
+74,Vanity Fair,Justen Mayert,Fantasy,29.06,2,0-722-794652-2
+75,Françoise Sagan,Roberto Thiel III,Humor,65.01,26,0-212-329606-5
+76,Terrible Swift Sword,Alanna Wisozk,Tall tale,12.2,21,0-781-406904-2
+77,Unweaving the Rainbow,Vicente Rau,Comic/Graphic Novel,29.24,19,0-161-683946-3
+78,The Golden Bowl,Jenifer Wolf,Fanfiction,21.56,12,0-265-509396-4
+79,Beyond the Mexique Bay,Renee DuBuque,Fairy tale,11.09,21,0-345-789780-2
+80,I Will Fear No Evil,Buddy Greenfelder,Legend,15.88,12,0-872-223213-6
+81,When the Green Woods Laugh,Frederik Mayert,Textbook,39.39,15,0-158-854697-3
+82,Recalled to Life,Angela O'Kon IV,Historical fiction,87.54,1,0-339-143546-5
+83,Ego Dominus Tuus,Ms. Ronaldo Turner,Classic,83.88,7,0-584-136524-0
+84,Carrion Comfort,Hortense O'Kon,Realistic fiction,41.17,26,0-553-773187-4
+85,Clouds of Witness,Prince Schuster,Metafiction,79.5,24,0-921-537635-3
+86,No Highway,Emanuel Reynolds,Mystery,39.12,16,0-887-199865-8
+87,The Sun Also Rises,Hunter Romaguera,Biography/Autobiography,60.17,16,0-751-767159-4
+88,Stranger in a Strange Land,Jess Hettinger,Essay,64.01,14,0-256-310991-5
+89,Clouds of Witness,Kiana Zieme,Reference book,18.74,28,0-364-199830-8
+90,The Torment of Others,Juliet Borer,Fiction in verse,32.08,19,0-949-941062-1
+91,To Sail Beyond the Sunset,Mrs. Ayana Quitzon,Essay,34.68,24,0-340-145796-8
+92,Dying of the Light,Laila Boyle,Fiction narrative,35.89,24,0-429-928377-4
+93,Ring of Bright Water,Ernestina Ritchie,Metafiction,43.57,4,0-907-946764-2
+94,Antic Hay,Newton Jacobi,Science fiction,50.32,4,0-582-396257-5
+95,A Time to Kill,Robyn Toy V,Realistic fiction,22.12,30,0-895-821316-8
+96,Cover Her Face,Lavonne Hoeger,Narrative nonfiction,23.19,6,0-131-462281-5
+97,Dying of the Light,Pinkie O'Hara,Essay,66.78,17,0-400-714624-3
+98,Lilies of the Field,Mauricio Oberbrunner,Fiction in verse,50.25,27,0-906-342472-9
+99,Have His Carcase,Ms. Emelie Stokes,Classic,61.92,4,0-781-363960-2
+100,The Lathe of Heaven,Berta Padberg,Tall tale,60.1,5,0-542-413148-4
