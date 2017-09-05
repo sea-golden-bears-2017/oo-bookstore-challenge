@@ -5,12 +5,30 @@ require_relative '../bookstore'
 describe BookStore do
 context "Bookstore attributes" do
 
-  it "has hours"
-  it "has books"
-  it "has sections"
-  it "has employees"
-  it "can be open"
-  it "has a revenue"
+  it "has hours" do
+      expect(bookstore.hours).to eq [9,5]
+  end
+
+  it "has books" do
+    expect(bookstore.books).to all(be_a(Book))
+  end
+
+  it "has sections" do
+    expect(bookstore.sections).to be ["front", 'back', 'downstairs', 'upstairs']
+  end
+
+  it "has employees" do
+    expect(bookstore.employees).to be_an(Array)
+  end
+
+  it "can be open" do
+    expect(bookstore.is_open).to be_in([true, false])
+  end
+
+  it "has a revenue" do
+    expect(bookstore.revenue).to be_a(Float)
+  end
+  
 end
 context "Bookstore behaviors" do
   it "can hire employees"
