@@ -20,7 +20,7 @@ let(:book) {Book.new(package)}
   end
 
   it 'has a title' do
-    expect(book.title).to eq
+    expect(book.title).to eq "The Man Within"
   end
 
   it 'has an author' do
