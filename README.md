@@ -31,4 +31,4 @@ Move on when you have written out all the ```it``` blocks for the BookStore clas
 
 ## Release 1: Bookstore and Books
 
-At this point we can start building out our bookstore class. What are the responsibilities of the bookstorey
+At this point we can start building out our bookstore class. What are the responsibilities of the bookstore. Once you've passed all your tests check in with an instructor to see what comes next ;)
