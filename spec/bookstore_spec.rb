@@ -1,1 +1,1 @@
-require 'bookstore'
+require_relative '../bookstore'
