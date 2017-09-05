@@ -3,6 +3,10 @@ require_relative '../bookstore'
 
 
 describe BookStore do
+
+  let(:bookstore) {BookStore.new('Jelizas YA Fixion')}
+
+
 context "Bookstore attributes" do
 
   it "has hours" do
@@ -10,11 +14,11 @@ context "Bookstore attributes" do
   end
 
   it "has books" do
-    expect(bookstore.books).to all(be_a(Book))
+    expect(bookstore.books).to be_an(Array)
   end
 
   it "has sections" do
-    expect(bookstore.sections).to be ["front", 'back', 'downstairs', 'upstairs']
+    expect(bookstore.sections).to be ["front", 'back', 'downstairs', 'upstairs', 'Young Adult Fiction']
   end
 
   it "has employees" do
@@ -28,7 +32,7 @@ context "Bookstore attributes" do
   it "has a revenue" do
     expect(bookstore.revenue).to be_a(Float)
   end
-  
+
 end
 context "Bookstore behaviors" do
   it "can hire employees"
