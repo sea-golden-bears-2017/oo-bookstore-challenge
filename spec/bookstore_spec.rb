@@ -1,21 +1,15 @@
 require 'rspec'
 require_relative '../book'
 require_relative '../bookstore'
-
-class Employee
-  attr_reader :id, :name
-  def initialize(id, name)
-    @id = id
-    @name = name
-  end
-end
+require_relative '../employee'
 
 describe BookStore do
 
   let (:book_store) { BookStore.new({hours: "10 AM - 10 PM",
                               sections: {"Fiction" => [],
                                         "Non-Fiction" => []}})}
-
+  let(:employee) { Employee.new("Amanuel", 555555555, 9052017)}
+  
   it 'lists hours from 10 am to 10pm' do
     expect(book_store.hours).to eq("10 AM - 10 PM")
   end
@@ -46,13 +40,11 @@ describe BookStore do
   end
 
   it 'can hire employees' do
-    employee = Employee.new(1,"Amanuel")
     book_store.hire(employee)
     expect(book_store.employees.keys).to eq([employee.id])
   end
 
   it 'can fire employees' do
-    employee = Employee.new(1,"Amanuel")
     book_store.hire(employee)
     book_store.fire(employee)
     expect(book_store.employees).to eq({})

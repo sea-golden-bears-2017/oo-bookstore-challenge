@@ -5,6 +5,6 @@ class CashRegister
   attr_reader :cash_register
 
   def initialize(cash)
-    @cash_register = cash
+    @till = cash
   end
 end

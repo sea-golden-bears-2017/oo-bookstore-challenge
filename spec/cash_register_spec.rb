@@ -31,13 +31,13 @@ let (:cash_register) { CashRegister.new(300) }
     expect(book_store.books_inventory.length).to eq(0)
   end
 
+  it 'has a cash register' do
+    expect(cash_register.till).to eq(300)
+  end
+
   it 'increases revenue when we make a sale' do
     cash_register.purchase(book, book_store.books_inventory)
     cash_register.sell(book, book_store.books_inventory)
-    expect(cash_register.cash_register).to eq(312.50)
-  end
-
-  it 'has a cash register' do
-    expect(cash_register.cash_register).to eq(300)
+    expect(cash_register.till).to eq(312.50)
   end
 end
