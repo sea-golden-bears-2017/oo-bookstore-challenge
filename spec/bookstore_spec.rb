@@ -18,7 +18,7 @@ context "Bookstore attributes" do
   end
 
   it "has sections" do
-    expect(bookstore.sections).to be ["front", 'back', 'downstairs', 'upstairs', 'Young Adult Fiction']
+    expect(bookstore.sections).to eq ["front", 'back', 'downstairs', 'upstairs', 'Young Adult Fiction']
   end
 
   it "has employees" do
@@ -26,7 +26,7 @@ context "Bookstore attributes" do
   end
 
   it "can be open" do
-    expect(bookstore.is_open).to be_in([true, false])
+    expect(bookstore.is_open).to satisfy {|is_open| is_open == true || is_open == false}
   end
 
   it "has a revenue" do
