@@ -1,29 +1,24 @@
 require 'rspec'
 require_relative '../bookstore'
 
-describe Book do
-  let(:book) { Book.new }
+describe BookStore do
+  let(:bookstore) { BookStore.new }
 
-  describe "book"
-    it "has an ID" do
-      expect(book).to eq()
+  describe "bookstore methods"
+    it "is bookstore closed?" do
+      expect(bookstore.store_closed).to eq(true)
     end
-    it "has a title" do
-      expect(book).to eq()
+
+    it "Can the bookstore close?" do
+      expect(bookstore.close_store).to eq(@store_closed == true)
     end
-    it "has an author" do
-      expect(book).to eq()
+
+    it "Can the bookstore open?" do
+      expect(bookstore.open_store).to eq(@store_closed == false)
     end
-    it "has a genre" do
-      expect(book).to eq()
+
+    it "Hours are posted when requested" do
+      expect(bookstore.hours("tuesday")).to eq("8am - 4pm")
     end
-    it "has a price" do
-      expect(book).to eq()
-    end
-    it "has a count" do
-      expect(book).to eq()
-    end
-    it "has an isbn" do
-      expect(book).to eq()
-    end
+
 end
