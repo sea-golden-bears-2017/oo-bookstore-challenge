@@ -1,7 +1,9 @@
 class Book
+  attr_reader :id, :title, :author, :price, :genre, :isbn
+  attr_accessor :count
 
-  attr_reader :title, :author, :price, :count, :genre, :isbn
   def initialize(args)
+    @id = args[:id]
     @title = args[:title]
     @author = args[:author]
     @price = args[:price]
