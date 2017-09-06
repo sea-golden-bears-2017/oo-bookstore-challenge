@@ -35,10 +35,20 @@ context "Bookstore attributes" do
 
 end
 context "Bookstore behaviors" do
-  it "can hire employees"
-  it "can fire employees"
-  it "can be opened"
-  it "can be closed"
+  it "can hire employees" do
+    expect(bookstore.hire_employee({})).to eq "Connect me to Employee class"
+  end
+  it "can fire employees" do
+    expect(bookstore.fire(1)).to eq bookstore.employees
+  end
+  it "can be opened" do
+    bookstore.open_store
+    expect(bookstore.is_open).to eq true
+  end
+  it "can be closed" do
+    bookstore.close_store
+    expect(bookstore.is_open).to eq false
+  end
 end
 context "POS behaviors" do
   it "can make a sale"
