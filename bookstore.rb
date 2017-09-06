@@ -19,7 +19,7 @@ class BookStore
   end
 
   def add_transaction(transaction)
-    @transactions << transaction 
+    @transactions << transaction
   end
 
 
@@ -36,12 +36,16 @@ end
 #
 #
 # POS (module)
+# has method that calculates revenue based on combined
+# revenue value of each transaction object
 #
 # sell
 # purchase
 # return
 # discount
-#
+# create transaction
+#   INPUT: hash
+#   OUTPUT: transaction object
 #
 # transaction
 #

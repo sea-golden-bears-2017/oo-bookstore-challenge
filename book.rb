@@ -9,7 +9,5 @@ class Book
     @price = book_hash[:price]
     @count = book_hash[:count]
     @isbn = book_hash[:isbn]
-
-
   end
 end
