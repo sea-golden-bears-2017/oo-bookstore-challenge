@@ -3,9 +3,9 @@ require_relative '../book'
 require_relative '../store'
 
 describe Store do
-  let!(:store2) { Store.new({
+  let!(:store) { Store.new({
     books: 'Placeholder',
-    hours2: '9-6',
+    hours: '9-6',
     sections: 'Fiction',
     employees: 'Placeholder',
     store_open: true,
@@ -15,7 +15,7 @@ describe Store do
   context "Store Attributes" do
     it 'Store has Hours' do
       # p store.inspect
-      expect(store2.hours2).to eq('9-6')
+      expect(store.hours).to eq('9-6')
 
     end
 
