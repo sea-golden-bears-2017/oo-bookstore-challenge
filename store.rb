@@ -1,5 +1,6 @@
 require_relative 'book'
 # require_relative 'employee'
+require 'csv'
 
 class Store
 
@@ -24,11 +25,20 @@ class Store
   end
 
   def get_books(quantity)
+    book_information_csv = CSV.read("invoice.csv")
+
+    book_information_headers = book_information_csv.shift.map do |header|
+      header.to_sym
+    end
+
     #FIXME
     #I need to use Books.new to add books to @books
     #Use CSV to capture books for get_books method
     @books = []
-    quantity.times do
+    counter = 0
+
+    while counter < quantity
+      book_information_csv[counter]
       @books << "book"
     end
   end
