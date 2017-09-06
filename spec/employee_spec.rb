@@ -24,7 +24,7 @@ describe Employee do
   end
 
   it 'has hours' do
-    expect(employee.hours).to eq 0
+    expect(employee.hours).to eq 40
   end
 
   it 'has hire date' do
@@ -43,6 +43,11 @@ describe Employee do
     expect(employee.on_shift).to eq false
   end
 
+  it "changes on_shift status when toggled" do
+    employee.on_shift_toggle
+    expect(employee.on_shift).to eq true
+  end
+
   it 'has ssn/tax id' do
     expect(employee.ssn).to eq "111-11-1111"
   end
@@ -51,5 +56,8 @@ describe Employee do
     expect(employee.status).to eq "active"
   end
 
+  it "prints employee info" do
+    employee.print_employee_info
+  end
 
 end
