@@ -1,12 +1,13 @@
 require_relative 'book'
 
 class BookStore
-  attr_reader :books, :employees, :revenue
+  attr_reader :books, :employees, :revenue, :transactions
 
   def initialize
     @books = []
     @employees = []
     @revenue = 1.0
+    @transactions = []
   end
 
   def add_book(book)
@@ -15,6 +16,10 @@ class BookStore
 
   def add_employee(employee)
     @employees << employee
+  end
+
+  def add_transaction(transaction)
+    @transactions << transaction 
   end
 
 
