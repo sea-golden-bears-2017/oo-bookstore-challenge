@@ -29,4 +29,11 @@ describe BookStore do
     end
   end
 
+  describe "#fire" do
+    let(:fired_employee){'Marrey Jones'}
+    it "removes an employee from employees" do
+      bookstore.fire(fired_employee)
+      expect(bookstore.employees.length).to eq 1
+    end
+  end
 end

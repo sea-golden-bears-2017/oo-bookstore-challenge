@@ -16,4 +16,8 @@ class BookStore
   def hire(employee)
     @employees << employee
   end
+
+  def fire(employee)
+    @employees.delete(employee)
+  end
 end
