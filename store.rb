@@ -24,6 +24,9 @@ class Store
   end
 
   def get_books(quantity)
+    #FIXME
+    #I need to use Books.new to add books to @books
+    #Use CSV to capture books for get_books method
     @books = []
     quantity.times do
       @books << "book"
