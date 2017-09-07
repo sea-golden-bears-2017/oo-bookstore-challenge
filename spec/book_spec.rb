@@ -13,6 +13,18 @@ describe Book do
                          book_format: "Hard Cover",
                          cost: 7.17,
                          discounted: true})}
+
+  let (:bad_book) { Book.new({title: "Harry Potter and the Philosopher's Stone",
+                         author: "J.K. Rowling",
+                         price: 12.50,
+                         genre: "Fiction",
+                         quantity: 4,
+                         isbn: 9788700631625,
+                         condition: "New",
+                         publisher: "Scholastic",
+                         book_format: "Hard Cover",
+                         cost: 20.17,
+                         discounted: true})}
   it 'has a title' do
     expect(book.title).to eq("Harry Potter and the Philosopher's Stone")
   end
@@ -69,5 +81,13 @@ describe Book do
 
   it "has a discount" do
     expect(book.discounted).to eq(true)
+  end
+
+  it 'can be appraised' do
+    expect(Book::Appraisable::appraise(book)).to eq(book.cost)
+  end
+
+  it 'can be rejected' do
+    expect(Book::Appraisable::reject(bad_book)).to be false
   end
 end

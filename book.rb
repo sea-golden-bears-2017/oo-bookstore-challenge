@@ -1,8 +1,11 @@
 require_relative 'product'
+require_relative 'appraisable'
 
 class Book < Product
-  attr_reader :author, :title, :genre, :isbn, :condition, :publisher, :book_format, :exploded
+  include Appraisable
 
+  attr_reader :author, :title, :genre, :isbn, :condition, :publisher,
+              :book_format, :exploded
   attr_accessor :discounted
 
   def initialize(options)
