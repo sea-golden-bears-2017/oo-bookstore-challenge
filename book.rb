@@ -28,7 +28,7 @@ class Book
 
   def increase(num=1)
     @quantity += num
-  end
+  enddx
 
   def explode
     @exploded = true
