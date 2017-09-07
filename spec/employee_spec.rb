@@ -2,7 +2,7 @@ require_relative '../employee.rb'
 
 describe Employee do
   describe "initialize" do
-    let(:worker) {Employee.new(id:672358, name:"Jaiash", position:"clerk", wage:10.50, hire_date: "02-17-2017", term_date: nil, ssn: 123-45-6789, auth_level: 3, on_shift:true)}
+    let(:worker) {Employee.new(id:672358, name:"Jaiash", position:"clerk", wage:10.50, hire_date: "02-17-2017", ssn: 123-45-6789, auth_level: 3)}
 
     it "has an id" do
       expect(worker.id).to eq 672358
