@@ -1,16 +1,15 @@
-class Book
-  attr_reader :quantity, :title, :author, :genre, :cover_style, :isbn, :price, :publisher, :cost
+require_relative "product.rb"
+class Book < Product
+  attr_reader  :title, :author, :genre, :cover_style, :isbn, :publisher
 
   def initialize(hash)
-    @quantity = hash[:quantity]
+    super(hash[:quantity], hash[:price], hash[:cost])
     @title = hash[:title]
     @author = hash[:author]
     @genre = hash[:genre]
     @cover_style = hash[:cover_style]
     @isbn = hash[:isbn]
-    @price = hash[:price]
     @publisher = hash[:publisher]
-    @cost = hash[:cost]
   end
 
 end
