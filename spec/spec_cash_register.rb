@@ -2,7 +2,7 @@ require_relative '../cash_register.rb'
 
 describe CashRegister do
   context 'Attribute tests' do
-    let(:register) { CashRegister.new() }
+    let(:register) { CashRegister.new }
 
     it 'has transactions' do
       expect(register.transactions).to eq []
