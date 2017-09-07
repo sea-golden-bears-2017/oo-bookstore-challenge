@@ -43,7 +43,7 @@ class BookStore
   end
 
   def hire(num_hires)
-
+    Employee.new()
   end
 
 end
