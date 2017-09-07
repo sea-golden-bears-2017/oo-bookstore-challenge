@@ -1,16 +1,16 @@
-class Book
-  attr_reader :title, :author, :genre, :isbn, :price, :count, :publisher, :condition, :book_format
+require_relative 'product'
+
+class Book < Product
+  attr_reader :author, :genre, :isbn, :publisher, :condition, :book_format
 
   def initialize(args = {})
-    @title = args[:title]
     @author = args[:author]
     @genre = args[:genre]
     @isbn = args[:isbn]
-    @price = args[:price]
-    @count = args[:count]
     @publisher = random_publisher
     @condition = random_condition
     @book_format = random_book_format
+    super(args)
   end
 
   def random_publisher

@@ -6,8 +6,8 @@ describe BookStore do
   let(:bookstore) { BookStore.new }
 
   it "purchases books and adds them to the inventory" do
-    bookstore.purchase('../invoice.csv')
-    expect(bookstore.books.length).to_not be 0
+    bookstore.purchase("../invoice.csv")
+    expect(bookstore.books.length).to_all be_instance_of Book
   end
 
   it "adds an employee to this list when hired" do

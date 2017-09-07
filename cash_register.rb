@@ -4,7 +4,8 @@ class CashRegister
 
   def initialize
     @starting_value = 250.0
-    @current_cash = 250.0
+    @current_cash   = 250.0
+    @transactions   = []
   end
 
   def cash_drop
