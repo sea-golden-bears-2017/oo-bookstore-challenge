@@ -21,6 +21,7 @@ describe Employee do
 
   it 'has an id' do
     expect(employee.id).to eq 4
+    p employee.id
   end
 
   it 'has hours' do

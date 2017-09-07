@@ -27,6 +27,7 @@ class Employee
 
   def print_employee_info
     puts <<-INFO
+      Employee number is #{@id}
       Name is #{@name}
       Wage is $#{@wage}/hr
       Position is #{@position}
