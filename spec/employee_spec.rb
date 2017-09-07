@@ -26,10 +26,14 @@ let(:book_store) { BookStore.new({hours: "10 AM - 10 PM",
 		brooke.promotion("Manager")
 		expect(brooke.position).to eq("Manager")
 	end
-	
+
 	it 'she gets a new wage' do
 		brooke.negotiate(17)
 		expect(brooke.wage).to eq(17)
 	end
 
+	xit 'adds termination_date when fired' do
+		book_store.fire(brooke)
+		expect(brooke.termination_date).to eq(9072017)
+	end
 end

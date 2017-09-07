@@ -13,6 +13,7 @@ class Employee
     @position = 'new hire'
     @on_the_clock = false
     @employed = true
+		@termination_date = nil
   end
 
   def negotiate(hourly)

@@ -1,33 +1,21 @@
-class Book
-  attr_reader :author, :title, :quantity, :price, :genre, :isbn,
-   :condition, :publisher, :book_format, :cost, :exploded
+require_relative 'product'
+
+class Book < Product
+
+  attr_reader :author, :title, :genre, :isbn,
+   :condition, :publisher, :book_format
 
 
   def initialize(options)
+    super(options)
     @author = options[:author]
     @title = options[:title]
-    @quantity = options[:quantity]
-    @price = options[:price]
     @genre = options[:genre]
     @isbn = options[:isbn]
     @condition = options[:condition]
     @publisher = options[:publisher]
-    @cost = options[:cost]
     @book_format = options[:book_format]
-    @exploded = false
   end
 
-  def decrease(num=1)
-    @quantity -= num
-  end
 
-  def increase(num=1)
-    @quantity += num
-  end
-
-  def explode
-    @exploded = true
-    @price = 0
-    decrease
-  end
 end

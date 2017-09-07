@@ -2,7 +2,7 @@ require_relative 'employee'
 
 class BookStore
   attr_reader :hours, :sections, :books_inventory, :employees, :open, :revenue
-  
+
   def initialize(options)
     @hours = options[:hours]
     @sections = options[:sections]
