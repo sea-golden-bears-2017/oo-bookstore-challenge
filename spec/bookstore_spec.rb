@@ -6,7 +6,7 @@ require_relative '../cash_register'
 describe BookStore do
   let(:book_hash) {{:id => "1",:title => "After Many a Summer Dies the Swan", :author => "Mustafa Mayer MD", :genre => "Fairy tale", :price => "83.42", :count => "17", :isbn => "0-194-607033-0"}}
   let(:book) { Book.new(book_hash) }
-  let(:employee) { Employee.new(1) }
+  let(:employee) { Employee.new({id: 1}) }
   let(:transaction) { Transaction.new }
 
   let(:bookstore) { BookStore.new }
@@ -52,7 +52,7 @@ describe BookStore do
 
   describe 'fire' do
     it  'deletes employee at id' do
-      employee_2 = bookstore.hire(Employee.new(2))
+      employee_2 = bookstore.hire(Employee.new({id: 2}))
       bookstore.fire(2)
       employee_array = bookstore.employees
       expect(employee_array).not_to include(employee_2)
