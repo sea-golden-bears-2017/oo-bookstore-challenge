@@ -12,7 +12,8 @@ class Store
     @revenue
     # @sections
     @employees = []
-    get_books(500)
+    @books = []
+    # get_books(500)
     toggle_close
   end
 
@@ -24,23 +25,20 @@ class Store
     #removes an employee from system
   end
 
-  def get_books(quantity)
-    book_information_csv = CSV.read("invoice.csv")
+  def parse_books(filename)
 
+    book_information_csv = CSV.read(filename)
     book_information_headers = book_information_csv.shift.map do |header|
       header.to_sym
     end
-
-    #FIXME
-    #I need to use Books.new to add books to @books
-    #Use CSV to capture books for get_books method
-    @books = []
     counter = 0
 
-    while counter < quantity
-      book_information_csv[counter]
-      @books << "book"
+    while counter < book_information_csv.count
+      book_information_csv[counter] = Hash[book_information_headers zip book_information_csv[counter]]
+      @books << Book.new(book_information_csv[counter])
+      counter += 1
     end
+    p @books
   end
 
   def toggle_open
@@ -52,3 +50,9 @@ class Store
   end
 
 end
+
+store = Store.new
+p store
+store.parse_books("invoice.csv")
+
+

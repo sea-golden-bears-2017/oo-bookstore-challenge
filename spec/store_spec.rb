@@ -49,7 +49,8 @@ describe 'Store class' do
 
   describe 'get_books' do
     it 'adds new books to inventory' do
-      #add get_books test for adding new books to inventory
+      store.get_books(30)
+      expect(store.books.count).to eq 30
     end
   end
 
