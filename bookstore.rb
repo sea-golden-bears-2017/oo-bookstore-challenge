@@ -4,12 +4,13 @@ require_relative 'employee'
 
 class BookStore
 
-  attr_reader :books, :open, :employees
+  attr_reader :books, :open, :employees, :sections
 
   def initialize
     @books = []
     @employees = []
     @open = false
+    @sections = ["fiction", "graphic novels", "magazines"]
   end
 
   def purchase(filename)
@@ -31,5 +32,9 @@ class BookStore
 
   def fire(id)
     @employees.delete_if { |employee| employee.id == id }
+  end
+
+  def add_section(new_section)
+    @sections << new_section
   end
 end

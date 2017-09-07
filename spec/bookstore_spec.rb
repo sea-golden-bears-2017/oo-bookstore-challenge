@@ -34,5 +34,12 @@ describe BookStore do
     expect(bookstore.toggle_open_status).to be false
   end
 
+  it "has sections" do
+    expect(bookstore.sections).to eq ["fiction", "graphic novels", "magazines"]
+  end
+
+  it "can add a section" do
+    expect(bookstore.add_section("nonfiction")).to eq ["fiction", "graphic novels", "magazines", "nonfiction"]
+  end
 
 end
