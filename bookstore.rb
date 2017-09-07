@@ -1,4 +1,5 @@
 require 'csv'
+require_relative 'book.rb'
 
 class BookStore
  attr_reader :closed, :store_hours
@@ -31,7 +32,7 @@ class BookStore
   end
 
   def purchase(file_name)
-    CSV.foreach('file_name', :headers => true) do |row|
+    CSV.foreach(file_name, :headers => true) do |row|
       hash_row = row.to_h
       book = Book.new(hash_row)
       @books_array << book

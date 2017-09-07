@@ -1,5 +1,7 @@
 require 'rspec'
 require_relative '../bookstore'
+require_relative '../book'
+
 
 describe BookStore do
   let(:bookstore) { BookStore.new }
@@ -35,7 +37,7 @@ describe BookStore do
 
     describe "#purchase" do
       it "purchases book (adds books to book_array)" do
-        bookstore.purchase()
+        bookstore.purchase('invoice.csv')
         expect(bookstore.books_array.length).to_not eq(0)
       end
     end
