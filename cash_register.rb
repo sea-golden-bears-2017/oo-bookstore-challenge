@@ -5,16 +5,18 @@ class CashRegister
   include PointOfSale
 
   attr_accessor :till
+  @@transactions = 0
 
   def initialize(cash)
     @till = cash
+    @transactions = {}
   end
 
-  def sell_book(item)
+  def make_sale(item)
     @till = sell(@till, item)
   end
 
-  def return_book(item)
+  def customer_return(item)
     @till = return_item(@till, item)
   end
 

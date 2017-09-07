@@ -49,16 +49,18 @@ let (:register_1) { CashRegister.new(300) }
 
   context "CashRegister Actions" do
     it 'update till using transaction' do
-      register_1.sell_book(book)
+      register_1.make_sale(book)
       expect(register_1.till).to eq 312.50
     end
 
     it 'update till using transaction' do
-      register_1.return_book(book)
+      register_1.customer_return(book)
       expect(register_1.till).to eq 287.50
     end
 
-
+    it 'record a transaction' do
+      
+    end
   end
 
 
