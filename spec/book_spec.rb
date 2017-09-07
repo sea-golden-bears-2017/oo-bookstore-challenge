@@ -2,7 +2,6 @@ require_relative '../book.rb'
 require_relative '../product.rb'
 describe Book do
   let(:info) { {quantity: 1, title: "yo", author: "marlo", genre: "thriller", cover_style: "soft", isbn: 0-374-150159-0, price: 10.95, publisher: "string", cost: 5.95} }
-  #let(:product) { Product.new(info)}
   let(:book) { Book.new(info) }
 
 
