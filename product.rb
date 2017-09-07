@@ -1,10 +1,11 @@
 class Product
-  attr_accessor :quantity, :price, :cost, :exploded
+  attr_reader :quantity, :price, :cost, :exploded, :sku
+
   def initialize(options)
     @quantity = options[:quantity]
     @price = options[:price]
     @cost = options[:cost]
-    @sku = options[:cost]
+    @sku = options[:sku]
     @exploded = false
 
   end
