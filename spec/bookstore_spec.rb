@@ -12,9 +12,9 @@ describe BookStore do
     expect(store.books.class).to eq Array
   end
 
-  # it 'has sections' do
-  #   expect(store.sections.class).to eq Array
-  # end
+  it 'has sections' do
+    expect(store.sections.class).to eq Array
+  end
 
   it 'has employees' do
     expect(store.employees.class).to eq Array
@@ -24,8 +24,18 @@ describe BookStore do
     expect(store.revenue.class).to eq Fixnum
   end
 
-  it 'has returns true if open?'do
-    expect(store.open?).to be false
+  it "is open or closed" do
+    expect(store.is_open).to eq false
+  end
+
+  it "opens the store" do
+    store.open_store
+    expect(store.is_open).to be true
+  end
+
+  it "closes the store" do
+    store.close_store
+    expect(store.is_open).to be false
   end
 
   it 'can hire employees' do
