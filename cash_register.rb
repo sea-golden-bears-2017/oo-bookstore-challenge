@@ -8,15 +8,15 @@ class CashRegister
     @till = cash
   end
 
-  def sell(book, inventory)
+  def sell(book, inventory, employee)
     @till = pos_sell(book, inventory, @till)
   end
 
-  def purchase(book, inventory)
+  def purchase(book, inventory, employee)
     @till = pos_purchase(book, inventory, @till)
   end
 
-  def return(book, inventory)
+  def return(book, inventory, employee)
     @till = pos_return(book, inventory, @till)
   end
 
