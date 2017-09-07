@@ -2,7 +2,7 @@ require 'rspec'
 require_relative '../employee'
 
 describe Employee do
-  let(:employee) {Employee.new(1)}
+  let(:employee) {Employee.new({id: 1, name: "Frank"})}
 
   context "attributes" do
 
@@ -10,16 +10,20 @@ describe Employee do
       expect(employee.id).to eq 1
     end
 
-    xit "has a name" do
+    it "has a name" do
+      employee2 = Employee.new({id: 2, name: "Jasmine"})
+      expect(employee2.name).to eq "Jasmine"
 
     end
 
-    xit "has a position" do
-      
+    it "has a position" do
+      employee.position = "book expert"
+      expect(employee.position).to eq "book expert"
     end
 
-    xit "has a wage" do
-
+    it "has a wage" do
+      employee.wage = 17
+      expect(employee.wage).to eq 17
     end
 
     xit "has an auth_level" do
