@@ -28,7 +28,7 @@ describe Employee do
   end
 
   it 'has hire date' do
-    expect(employee.hire_date.strftime('%m-%d-%Y')).to eq "09-05-2017"
+    expect(employee.hire_date.strftime('%m-%d-%Y')).to eq "09-07-2017"
   end
 
   it 'has termination date' do

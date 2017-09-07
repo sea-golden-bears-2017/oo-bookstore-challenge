@@ -1,9 +1,10 @@
 require 'csv'
 require_relative 'book'
+require_relative 'employee'
 
 class BookStore
 
-  attr_reader :books, :open
+  attr_reader :books, :open, :employees
 
   def initialize
     @books = []
@@ -20,5 +21,11 @@ class BookStore
 
   def toggle_open_status
     @open = !@open
+  end
+
+  def hire(args)
+    new_employee = Employee.new(args)
+    @employees << new_employee
+    new_employee
   end
 end
