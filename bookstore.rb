@@ -27,6 +27,7 @@ class BookStore
     @hours.include?(current_time(time))
   end
 
+
   private
 
   def current_time(time)

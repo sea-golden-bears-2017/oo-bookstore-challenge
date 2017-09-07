@@ -7,6 +7,9 @@ describe BookStore do
   let(:book_1) {Book.new({id: '1', title: "The Yellow Meads of Asphodel", author: 'Miss Gerardo Harber', genre: 'Mythopoeia', price: 10.37, count: 24, isbn: '0-278-814673-6'})}
 
   let(:book_2) {Book.new({ id: '2', title: "As I Lay Dying", author: 'Simeon Daniel', genre: 'Mystery', price: 51.17, count: 15, isbn: '0-466-611824-7' })}
+
+  let(:book_2) {Book.new({ id: '2', title: "As I Lay Dying", author: 'Simeon Daniel', genre: 'Mystery', price: 51.17, count: 15, isbn: '0-466-611824-7' })}
+
   let(:books_array) {[book_1, book_2]}
 
   let(:employee_1) { Employee.new({name: 'Jerry Smith', id: '001', wage: 18, position: 'Cashier', ssn: '123-45-6789', authorization: '1', hire_date: '01-01-2017', termination_date: nil}) }
@@ -26,6 +29,23 @@ describe BookStore do
       it 'has employees'
       it 'has sections'
       it 'has revenue'
+    end
+
+    describe '#add_books' do
+      let(:new_books){}
+      #input - item
+      #output - updated array
+      it 'returns the updated books array' do
+        expect(bookstore.add_books(new_books)).to eq
+      end
+
+      it 'does not reset the books array' do
+
+      end
+    end
+
+    describe "#remove_book" do
+
     end
 
     describe '#has_books?' do
