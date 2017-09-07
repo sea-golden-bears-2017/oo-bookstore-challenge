@@ -15,4 +15,8 @@ class CashRegister
   def purchase(book, inventory)
     @till = pos_purchase(book, inventory, @till)
   end
+
+  def return(book, inventory)
+    @till = pos_return(book, inventory, @till)
+  end
 end

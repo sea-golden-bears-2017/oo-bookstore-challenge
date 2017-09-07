@@ -2,6 +2,7 @@ class Book
   attr_reader :author, :title, :quantity, :price, :genre, :isbn,
    :condition, :publisher, :book_format, :cost, :exploded
 
+  attr_accessor :discounted
 
   def initialize(options)
     @author = options[:author]
@@ -15,6 +16,7 @@ class Book
     @cost = options[:cost]
     @book_format = options[:book_format]
     @exploded = false
+    @discounted = options[:discounted]
   end
 
   def reduce(num=1)

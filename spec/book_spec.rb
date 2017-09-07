@@ -11,7 +11,8 @@ describe Book do
                          condition: "New",
                          publisher: "Scholastic",
                          book_format: "Hard Cover",
-                         cost: 7.17})}
+                         cost: 7.17,
+                         discounted: true})}
   it 'has a title' do
     expect(book.title).to eq("Harry Potter and the Philosopher's Stone")
   end
@@ -64,5 +65,9 @@ describe Book do
 
   it 'has a cost' do
     expect(book.cost).to eq(7.17)
+  end
+
+  it "has a discount" do
+    expect(book.discounted).to eq(true)
   end
 end

@@ -11,6 +11,7 @@ describe CashRegister do
                          quantity: 4,
                          isbn: 9788700631625,
                          condition: "New",
+                         discounted: false,
                          publisher: "Scholastic",
                          book_format: "Hard Cover",
                          cost: 7.17})}
@@ -48,6 +49,19 @@ let (:cash_register) { CashRegister.new(300) }
     expect(cash_register.till).to eq(300 - 12.50)
   end
 
+  it "increases inventory when a return happens" do
+    book_store.books_inventory = {book.isbn => book}
+    cash_register.return(book, book_store.books_inventory)
+    expect(cash_register.till).to eq(300 - 12.50)
+    expect(book_store.books_inventory[book.isbn].quantity).to eq(5)
+  end
+
+  it "applies discounts when the book is on discount" do
+    book_store.books_inventory = {book.isbn => book}
+    book.discounted = true
+    cash_register.sell(book, book_store.books_inventory)
+    expect(cash_register.till).to eq(300 + (12.50 * 0.85))
+  end
   # it "can drop cash after a sale" do
   #
   # end
