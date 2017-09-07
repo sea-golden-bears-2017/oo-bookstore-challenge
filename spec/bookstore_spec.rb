@@ -24,9 +24,5 @@ describe BookStore do
     expect(bookstore.revenue).to eq(1.0)
   end
 
-  it 'has transactions' do
-    bookstore.add_transaction(transaction)
-    expect(bookstore.transactions.empty?).to eq(false)
-  end
 
 end
