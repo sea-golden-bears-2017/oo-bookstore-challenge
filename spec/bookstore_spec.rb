@@ -6,9 +6,9 @@ describe BookStore do
   let(:book_1) {Book.new({id: '1', title: "The Yellow Meads of Asphodel", author: 'Miss Gerardo Harber', genre: 'Mythopoeia', price: 10.37, count: 24, isbn: '0-278-814673-6'})}
   let(:book_2) {Book.new({ id: '2', title: "As I Lay Dying", author: 'Simeon Daniel', genre: 'Mystery', price: 51.17, count: 15, isbn: '0-466-611824-7' })}
   let(:books_array) {[book_1, book_2]}
-  let(:args) {{books: books_array, hours: 3, employees: ['Marrey Jones', 'Jim Bob'], sections: 3, revenue: 3} }
-  let(:bookstore) { BookStore.new(args) }
-  let(:empty_bookstore) { BookStore.new({books: [], hours: 3, employees: 3, sections: 3, revenue: 3}) }
+  let(:store_info) {{books: books_array, hours: 3, employees: ['Marrey Jones', 'Jim Bob'], sections: 3, revenue: 3} }
+  let(:bookstore) { BookStore.new(store_info) }
+  let(:empty_bookstore) { BookStore.new({books: [], hours: 3, employees: [], sections: 3, revenue: 3}) }
 
 
   describe '#has_books?' do
