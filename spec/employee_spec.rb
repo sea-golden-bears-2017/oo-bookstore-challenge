@@ -26,11 +26,14 @@ describe Employee do
       expect(employee.wage).to eq 17
     end
 
-    xit "has an auth_level" do
-
+    it "has an auth_level" do
+      employee.auth_level = 2
+      expect(employee.auth_level).to eq 2
     end
 
-    xit "has shifts" do
+    it "has shift hours" do
+      employee.hours = [0,8,8,8,8,0,10]
+      expect(employee.hours).to eq [0,8,8,8,8,0,10]
 
     end
   end
