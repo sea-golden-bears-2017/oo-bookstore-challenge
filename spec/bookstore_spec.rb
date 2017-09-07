@@ -30,4 +30,21 @@ describe BookStore do
     expect(bookstore.transactions.empty?).to eq(false)
   end
 
+  it 'books attribute is not empty after initialization' do
+    expect(bookstore.books).to_not eq []
+  end
+
+  it '#populate_books adds books to books attribute' do
+    bookstore.populate_books
+    is_book = true
+    is_book = false if bookstore.books.empty?
+    bookstore.books.each do |book|
+      if book.class != Book
+        is_book = false
+        break
+      end
+    end
+    expect(is_book).to be_truthy
+  end
+
 end

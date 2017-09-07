@@ -11,7 +11,29 @@ class BookStore
   end
 
   def add_book(book)
+    # Takes a Book object
     @books << book
+  end
+
+  def populate_books
+    # Things it needs to do
+    # Takes an array of book_hash(es)
+    # Make new instance of Book
+    # add_book
+  end
+
+  def parse_csv(filename)
+    # Start with empty book_hashes array
+    # Iterate line by line through csv (with headers as symbols)
+    # Each line becomes a new hash with headers as keys and line items as values
+    # Stuff array with aforementioned hash
+    # Output book_hashes filled with book hashes
+    
+
+  end
+
+  def build_book(book_hash)
+    Book.new(book_hash)
   end
 
   def add_employee(employee)
