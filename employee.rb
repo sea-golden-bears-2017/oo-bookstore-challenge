@@ -1,6 +1,6 @@
 class Employee
 	@@id = 0
-  attr_reader :id, :name, :ssn_tax_id, :hire_date, :wage, :position, :on_the_clock, :employeed, :termination_date
+  attr_reader :id, :name, :ssn_tax_id, :hire_date, :wage, :position, :on_the_clock, :employed
 
   def initialize(name, ssn_tax_id, hire_date)
     @id = @@id
@@ -12,8 +12,7 @@ class Employee
     @wage = 15
     @position = 'new hire'
     @on_the_clock = false
-    @employeed = true
-    @termination_date = nil
+    @employed = true
   end
 
   def negotiate(hourly)
@@ -29,9 +28,8 @@ class Employee
   	@on_the_clock = true
   end
 
-  def terminate(date)
-  	@employeed = false
-  	@termination_date = date
+  def terminate
+  	@employed = false
   end
 
 end
@@ -47,4 +45,3 @@ end
 # @termination_date
 # @on_shift
 # @shifts
-

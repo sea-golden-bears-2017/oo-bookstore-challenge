@@ -17,7 +17,7 @@ class Book
     @exploded = false
   end
 
-  def reduce(num=1)
+  def decrease(num=1)
     @quantity -= num
   end
 
@@ -28,6 +28,6 @@ class Book
   def explode
     @exploded = true
     @price = 0
-    reduce
+    decrease
   end
 end

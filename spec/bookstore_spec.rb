@@ -9,7 +9,7 @@ describe BookStore do
                               sections: {"Fiction" => [],
                                         "Non-Fiction" => []}})}
   let(:employee) { Employee.new("Amanuel", 555555555, 9052017)}
-  
+
   it 'lists hours from 10 am to 10pm' do
     expect(book_store.hours).to eq("10 AM - 10 PM")
   end
@@ -47,6 +47,6 @@ describe BookStore do
   it 'can fire employees' do
     book_store.hire(employee)
     book_store.fire(employee)
-    expect(book_store.employees).to eq({})
+    expect(employee.employed).to eq(false)
   end
 end

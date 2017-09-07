@@ -31,8 +31,8 @@ describe Book do
     expect(book.quantity).to eq(4)
   end
 
-  it 'can reduce quantity' do
-    book.reduce(2)
+  it 'can decrease quantity' do
+    book.decrease(2)
     expect(book.quantity).to eq(2)
   end
 

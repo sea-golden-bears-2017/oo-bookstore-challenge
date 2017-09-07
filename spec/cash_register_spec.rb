@@ -19,25 +19,36 @@ let (:book_store) { BookStore.new({hours: "10 AM - 10 PM",
                            sections: {"Fiction" => [],
                                      "Non-Fiction" => []}})}
 
-let (:cash_register) { CashRegister.new(300) }
-  it 'can buy books' do
-    cash_register.purchase(book, book_store.books_inventory)
-    expect(book_store.books_inventory.length).to eq(1)
+let (:register_1) { CashRegister.new(300) }
+
+  context 'POS Module Actions' do
+    it 'sells item to customers' do
+      expect(register_1.sell((register_1.till), book)).to eq(312.50)
+    end
+
+    it 'checks is quantity is decreased per sale' do
+      register_1.sell((register_1.till), book)
+      expect(book.quantity).to eq (3)
+    end
+
+    it 'buys item from publisher' do
+      expect(register_1.purchase((register_1.till), book)).to eq(292.83)
+    end
+
+    it 'checks is quantity is increased per sale' do
+      register_1.purchase((register_1.till), book)
+      expect(book.quantity).to eq (5)
+    end
+
   end
 
-  it 'can sell a book' do
-    cash_register.purchase(book, book_store.books_inventory)
-    cash_register.sell(book, book_store.books_inventory)
-    expect(book_store.books_inventory.length).to eq(0)
+
+  context "CashRegister Actions" do
+    it 'update till using transaction' do
+      register_1.sell_book(book)
+      expect(register_1.till).to eq 312.50
+    end
   end
 
-  it 'has a cash register' do
-    expect(cash_register.till).to eq(300)
-  end
 
-  it 'increases revenue when we make a sale' do
-    cash_register.purchase(book, book_store.books_inventory)
-    cash_register.sell(book, book_store.books_inventory)
-    expect(cash_register.till).to eq(312.50)
-  end
 end
