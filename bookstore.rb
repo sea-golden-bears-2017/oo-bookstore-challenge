@@ -28,4 +28,8 @@ class BookStore
     @employees << new_employee
     new_employee
   end
+
+  def fire(id)
+    @employees.delete_if { |employee| employee.id == id }
+  end
 end

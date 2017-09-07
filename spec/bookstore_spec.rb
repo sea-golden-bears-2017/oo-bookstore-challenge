@@ -15,6 +15,12 @@ describe BookStore do
     expect(bookstore.employees.include?(new_employee)).to eq true
   end
 
+  it "removes an employee from the list when fired" do
+    new_employee = bookstore.hire({name: "Suze", wage: 48.20, position: "Book Historian", authority_level: 7, ssn: "999-90-1111"})
+    bookstore.fire(new_employee.id)
+    expect(bookstore.employees).to eq []
+  end
+
   # it "it had some shelves" do
   #
   # end
