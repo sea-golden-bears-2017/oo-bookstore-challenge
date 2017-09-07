@@ -40,6 +40,10 @@ let (:register_1) { CashRegister.new(300) }
       expect(book.quantity).to eq (5)
     end
 
+    it "allows returns" do
+      expect(register_1.return_item(register_1.till, book)).to eq(287.50)
+    end
+
   end
 
 
@@ -48,6 +52,13 @@ let (:register_1) { CashRegister.new(300) }
       register_1.sell_book(book)
       expect(register_1.till).to eq 312.50
     end
+
+    it 'update till using transaction' do
+      register_1.return_book(book)
+      expect(register_1.till).to eq 287.50
+    end
+
+
   end
 
 

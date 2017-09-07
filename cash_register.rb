@@ -14,4 +14,8 @@ class CashRegister
     @till = sell(@till, item)
   end
 
+  def return_book(item)
+    @till = return_item(@till, item)
+  end
+
 end

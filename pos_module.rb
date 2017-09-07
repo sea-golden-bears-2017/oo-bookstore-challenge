@@ -10,5 +10,10 @@ def sell(till, item)
   till += item.price
 end
 
+def return_item(till, item)
+  item.increase
+  till -= item.price
+end
+
 
 end
