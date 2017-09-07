@@ -3,7 +3,7 @@ class Transaction
 
   # id
   # items
-  # revenue
+  # charge
   # employee_id
   # cash
   # change
