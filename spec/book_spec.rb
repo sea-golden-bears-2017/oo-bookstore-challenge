@@ -84,10 +84,10 @@ describe Book do
   end
 
   it 'can be appraised' do
-    expect(Book::Appraisable::appraise(book)).to eq(book.cost)
+    expect(book.appraise).to eq(book.cost)
   end
 
   it 'can be rejected' do
-    expect(Book::Appraisable::reject(bad_book)).to be false
+    expect(bad_book.reject?).to be false
   end
 end

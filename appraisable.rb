@@ -1,9 +1,9 @@
 module Appraisable
-  def self.appraise(product)
-    product.cost
+  def appraise
+    @cost
   end
 
-  def self.reject(product)
-    product.cost < product.price
+  def reject?
+    @cost < @price
   end
 end

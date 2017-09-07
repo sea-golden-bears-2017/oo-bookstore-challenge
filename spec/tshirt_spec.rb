@@ -29,10 +29,10 @@ describe Tshirt do
     expect(tshirt.quantity).to eq 4
   end
   it 'can be appraised' do
-    expect(Tshirt::Appraisable::appraise(tshirt)).to eq(tshirt.cost)
+    expect(tshirt.appraise).to eq(tshirt.cost)
   end
   it 'can be rejected' do
-    expect(Tshirt::Appraisable::reject(bad_tshirt)).to be false
+    expect(bad_tshirt.reject?).to be false
   end
 
 end
