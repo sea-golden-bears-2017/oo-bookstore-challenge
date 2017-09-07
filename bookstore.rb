@@ -1,11 +1,15 @@
 class BookStore
-  attr_reader :books, :employees
+  
+  attr_reader :books, :employees, :opening_time, :closing_time
+
   def initialize(args)
     @books = args[:books]
     @hours = args[:hours]
     @employees = args[:employees]
     @sections = args[:sections]
     @revenue = args[:revenue]
+    @opening_time = args[:opening_time]
+    @closing_time = args[:closing_time]
   end
 
   def has_books?

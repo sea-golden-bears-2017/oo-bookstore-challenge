@@ -6,10 +6,25 @@ describe BookStore do
   let(:book_1) {Book.new({id: '1', title: "The Yellow Meads of Asphodel", author: 'Miss Gerardo Harber', genre: 'Mythopoeia', price: 10.37, count: 24, isbn: '0-278-814673-6'})}
   let(:book_2) {Book.new({ id: '2', title: "As I Lay Dying", author: 'Simeon Daniel', genre: 'Mystery', price: 51.17, count: 15, isbn: '0-466-611824-7' })}
   let(:books_array) {[book_1, book_2]}
-  let(:args) {{books: books_array, hours: 3, employees: ['Marrey Jones', 'Jim Bob'], sections: 3, revenue: 3} }
+  let(:args) {{books: books_array, hours: 3, employees: ['Marrey Jones', 'Jim Bob'], sections: 3, revenue: 3, opening_time: '10:00', closing_time: '19:00'} }
   let(:bookstore) { BookStore.new(args) }
-  let(:empty_bookstore) { BookStore.new({books: [], hours: 3, employees: 3, sections: 3, revenue: 3}) }
+  let(:empty_bookstore) { BookStore.new({books: [], hours: 3, employees: 3, sections: 3, revenue: 3, opening_time: '10:00', closing_time: '19:00'}) }
 
+    it 'has an opening time' do
+      expect(bookstore.opening_time).to eq('10:00')
+    end
+
+    it 'has an closing time' do
+      expect(bookstore.closing_time).to eq('19:00')
+    end
+
+    xit 'has daily revenue' do
+
+    end
+
+    xit 'has sections' do
+
+    end
 
   describe '#has_books?' do
     it 'returns false if the inventory is empty' do
@@ -41,6 +56,9 @@ describe BookStore do
       it 'bookstore to be open' do
        expect(bookstore.open?).to be true
     end
+
+
+
   end
 
 end
