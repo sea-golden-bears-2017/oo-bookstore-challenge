@@ -1,5 +1,6 @@
 class BookStore
-  attr_reader :hours, :sections, :books_inventory, :employees, :open, :revenue
+  attr_reader :hours, :sections, :employees, :open, :revenue
+  attr_accessor :books_inventory
 
   def initialize(options)
     @hours = options[:hours]

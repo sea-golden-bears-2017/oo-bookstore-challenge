@@ -1,10 +1,17 @@
 module PointOfSale
-  def sell(book, inventory)
-    inventory.delete(book.isbn)
-    @cash_register += book.price
+  def pos_sell(book, inventory, till)
+    inventory[book.isbn].reduce
+    till + book.price
   end
 
-  def purchase(book, inventory)
-    inventory[book.isbn] = book
+  def pos_purchase(book, inventory, till)
+    inventory[book.isbn].increase
+    till - book.price
   end
+
+  def inventory(book, inventory)
+    inventory[book.isbn]
+  end
+
+  # def return(book)
 end
