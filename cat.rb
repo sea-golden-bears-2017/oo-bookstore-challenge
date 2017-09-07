@@ -1,13 +1,9 @@
-require_relative 'product'
+require_relative 'animal'
 
-class Cat < Product
+class Cat < Animal
 
   def initialize(args)
-    @color       = args[:color]
-    @age         = args[:age]
-    @breed       = args[:breed]
-    @noise_level = args[:noise_level]
-    super[args]
+    @meow_volume = args[:meow_volume]
+    super(args)
   end
-
 end
