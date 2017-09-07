@@ -16,6 +16,8 @@ class BookStore
       friday: "8am - 5pm"
     }
     @revenue = 0
+    @section = ["blue_room", "red_room", "purple_room", "pink_room", "orange_room", "gold_room", "green_room"]
+    @employees = []
   end
 
   def close
@@ -32,11 +34,16 @@ class BookStore
   end
 
   def purchase(file_name)
-    CSV.foreach(file_name, :headers => true) do |row|
+    CSV.foreach(file_name, :headers => true, :header_converters => :symbol) do |row|
       hash_row = row.to_h
       book = Book.new(hash_row)
       @books_array << book
+      @books_array
     end
+  end
+
+  def hire(num_hires)
+
   end
 
 end

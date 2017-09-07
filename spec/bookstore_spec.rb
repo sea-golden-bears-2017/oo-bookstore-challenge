@@ -41,5 +41,15 @@ describe BookStore do
         expect(bookstore.books_array.length).to_not eq(0)
       end
     end
+
+    describe '#hire' do
+      it "hires new employees" do
+        expect(bookstore.employees.length).to_not be(0)
+      end
+    end
+
+
+
+
   end
 end
