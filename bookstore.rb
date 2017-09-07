@@ -14,24 +14,20 @@ class BookStore
   end
 
   def close_store
-    if @store_closed == false
-      @store_closed = true
-    else
-      @store_closed = false
-    end
+    @store_closed = true
   end
 
   def open_store
-    if @store_closed == true
-      @store_closed = false
-    else
-      @store_closed = true
-    end
+    @store_closed = false
   end
 
   def hours(day)
     sym = day.to_sym
     @store_hours[sym]
+  end
+
+  def purchase
+
   end
 
 end
