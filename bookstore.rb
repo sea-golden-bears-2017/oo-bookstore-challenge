@@ -4,13 +4,14 @@ require_relative 'employee'
 
 class BookStore
 
-  attr_reader :books, :open, :employees, :sections
+  attr_reader :books, :open, :employees, :sections, :revenue
 
   def initialize
     @books = []
     @employees = []
     @open = false
     @sections = ["fiction", "graphic novels", "magazines"]
+    @revenue = 0.0
   end
 
   def purchase(filename)

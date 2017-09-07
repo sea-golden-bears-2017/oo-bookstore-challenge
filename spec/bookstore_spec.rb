@@ -42,4 +42,8 @@ describe BookStore do
     expect(bookstore.add_section("nonfiction")).to eq ["fiction", "graphic novels", "magazines", "nonfiction"]
   end
 
+  it "has a revenue" do
+    expect(bookstore.revenue).to eq 0.0
+  end
+
 end
