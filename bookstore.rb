@@ -20,4 +20,8 @@ class BookStore
   def fire(employee)
     @employees.delete(employee)
   end
+
+  def open?
+    true
+  end
 end

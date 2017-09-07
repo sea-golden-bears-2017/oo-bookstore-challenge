@@ -1,4 +1,3 @@
-require 'date'
 class Employee
 
   attr_reader :name, :id, :wage, :position, :ssn, :authorization, :hire_date, :termination_date

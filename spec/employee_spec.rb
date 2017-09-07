@@ -1,6 +1,5 @@
 require 'rspec'
 require_relative '../employee'
-require 'date'
 
 describe 'Employee' do
   let(:employee) {Employee.new({name: "John Smith", id: "1", wage: 15.00, position: "clerk", ssn: "555-33-9999", authorization: "1", hire_date: '2015-01-01', termination_date: '2015-04-01'})}

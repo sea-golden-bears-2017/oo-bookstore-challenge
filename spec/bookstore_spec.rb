@@ -36,4 +36,11 @@ describe BookStore do
       expect(bookstore.employees.length).to eq 1
     end
   end
+
+  describe '#open?' do
+      it 'bookstore to be open' do
+       expect(bookstore.open?).to be true
+    end
+  end
+
 end
