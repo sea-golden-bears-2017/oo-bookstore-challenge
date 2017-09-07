@@ -1,7 +1,9 @@
 require_relative '../employee.rb'
+require_relative '../bookstore.rb'
 
 describe Employee do
   describe "initialize" do
+    let(:our_cool_bookstore) {BookStore.new}
     let(:worker) {Employee.new(id:672358, name:"Jaiash", position:"clerk", wage:10.50, hire_date: "02-17-2017", ssn: 123-45-6789, auth_level: 3)}
 
     it "has an id" do
@@ -41,6 +43,13 @@ describe Employee do
       expect(worker.on_shift).to eq false
     end
 
-  end
 
-end
+  context 'Testing for Employee class from BookStore class' do
+    it 'hires an employee' do
+      our_cool_bookstore.hire(worker)
+      expect(our_cool_bookstore.employees[0]).to be_an_instance_of(Employee)
+    end
+
+  end #context end
+ end
+end #end employee class tests

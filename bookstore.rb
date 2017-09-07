@@ -19,8 +19,9 @@ class BookStore
     self.is_open = false
   end
 
-  def hire(employee)
-    
+  ### employee is a hash from Employee.new
+  def hire(new_employee)
+    self.employees << new_employee
   end
 
   def fire(employee)
