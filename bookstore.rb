@@ -40,8 +40,14 @@ end
 # revenue value of each transaction object
 #
 # sell
-# purchase
+#   find book in book array
+#   update book count
+#   build transaction hash
+#   initializes new transaction object
+#   stuff transaction object into bookstore attr
+
 # return
+# purchase new books
 # discount
 # create transaction
 #   INPUT: hash
@@ -55,6 +61,8 @@ end
 # employee_id
 # cash
 # change
+# type (return or sale)
+#
 #
 #
 # employee

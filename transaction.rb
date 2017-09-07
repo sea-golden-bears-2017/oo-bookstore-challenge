@@ -2,9 +2,10 @@ class Transaction
   #INPUT hash
 
   # id
-  # items
-  # revenue
   # employee_id
+  # type (return or sale)
+  # book_count (hash of id and count)
   # cash
   # change
+  # revenue
 end

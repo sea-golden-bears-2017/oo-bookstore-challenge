@@ -7,13 +7,14 @@ describe BookStore do
   let(:book) { Book.new(book_hash) }
   let(:employee) { Employee.new }
   let(:transaction) { Transaction.new }
-
   let(:bookstore) { BookStore.new }
 
   it 'has books' do
     bookstore.add_book(book)
     expect(bookstore.books.empty?).to eq(false)
   end
+
+  it 'returns a book'
 
   it 'has employees' do
     bookstore.add_employee(employee)
