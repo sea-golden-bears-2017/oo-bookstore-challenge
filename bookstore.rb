@@ -1,10 +1,11 @@
 require 'csv'
 require_relative 'book'
 require_relative 'employee'
+require_relative 'cash_register'
 
 class BookStore
 
-  attr_reader :books, :open, :employees, :sections, :revenue
+  attr_reader :books, :open, :employees, :sections, :revenue, :cash_register
 
   def initialize
     @books = []
@@ -12,6 +13,7 @@ class BookStore
     @open = false
     @sections = ["fiction", "graphic novels", "magazines"]
     @revenue = 0.0
+    @cash_register = CashRegister.new
   end
 
   def purchase(filename)
@@ -37,5 +39,9 @@ class BookStore
 
   def add_section(new_section)
     @sections << new_section
+  end
+
+  def add_revenue
+    @revenue += @cash_register.cash_drop
   end
 end

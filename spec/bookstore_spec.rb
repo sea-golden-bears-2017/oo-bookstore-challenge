@@ -46,4 +46,10 @@ describe BookStore do
     expect(bookstore.revenue).to eq 0.0
   end
 
+  it "can add revenue" do
+    bookstore.cash_register.current_cash = 400.0
+    bookstore.add_revenue
+    expect(bookstore.revenue).to eq 150.0
+  end
+
 end
