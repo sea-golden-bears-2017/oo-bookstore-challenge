@@ -15,10 +15,24 @@ describe 'Employee' do
   it 'has a wage' do
     expect(employee.wage).to eq 18
   end
-  
-  it 'has a position'
-  it 'has a ssn number'
-  it 'has an authorization level'
-  it 'has a hire date'
-  it 'has a termination date'
+
+  it 'has a position' do
+    expect(employee.position).to eq 'Cashier'
+  end
+
+  it 'has a ssn number' do
+    expect(employee.ssn).to eq '123-45-6789'
+  end
+
+  it 'has an authorization level' do
+    expect(employee.authorization).to eq '1'
+  end
+
+  it 'has a hire date' do
+    expect(employee.hire_date).to eq '01-01-2017'
+  end
+
+  it 'returns nil if employee has not been teerminated' do
+    expect(employee.termination_date).to be nil
+  end
 end

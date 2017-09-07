@@ -1,5 +1,5 @@
 class Employee
-  attr_reader :name, :id, :wage
+  attr_reader :name, :id, :wage, :position, :ssn, :authorization, :hire_date, :termination_date
 
   def initialize(args)
     @name = args[:name]
