@@ -18,6 +18,5 @@ describe Coffee do
     it 'it has a roast' do
       expect(coffee.roast).to eq 'dark'
     end
-    
   end
 end
