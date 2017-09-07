@@ -1,8 +1,8 @@
 class BookStore
- attr_reader :store_closed, :store_hours
+ attr_reader :closed, :store_hours
 
   def initialize
-    @store_closed = true
+    @closed = true
     @store_hours = {
       monday: "8am - 5pm",
       tuesday: "8am - 4pm",
@@ -13,12 +13,12 @@ class BookStore
     @revenue = 0
   end
 
-  def close_store
-    @store_closed = true
+  def close
+    @closed = true
   end
 
-  def open_store
-    @store_closed = false
+  def opens
+    @closed = false
   end
 
   def hours(day)

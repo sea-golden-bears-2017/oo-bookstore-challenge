@@ -5,16 +5,17 @@ describe BookStore do
   let(:bookstore) { BookStore.new }
 
   describe "bookstore methods"
-    it "is bookstore closed?" do
-      expect(bookstore.store_closed).to eq(true)
+    describe "#closed" do
+      it "is bookstore closed?" do
+        expect(bookstore.closed).to eq(true)
+      end
     end
-
     it "Can the bookstore close?" do
-      expect(bookstore.close_store).to eq(@store_closed == true)
+      expect(bookstore.close).to eq(@closed == true)
     end
 
     it "Can the bookstore open?" do
-      expect(bookstore.open_store).to eq(@store_closed == false)
+      expect(bookstore.opens).to eq(@closed == false)
     end
 
     it "Hours are posted when requested" do
