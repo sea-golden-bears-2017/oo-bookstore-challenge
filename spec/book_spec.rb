@@ -3,17 +3,17 @@ require_relative '../book'
 
 describe 'Book' do
   let(:book) {Book.new({
-    id: '1',
+    id:    "1001",
     title: "The Yellow Meads of Asphodel",
     author: 'Miss Gerardo Harber',
     genre: 'Mythopoeia',
     price: 10.37,
-    count: 24,
+    quantity: 24,
     isbn: '0-278-814673-6'
     })}
 
   it 'has an id' do
-    expect(book.id).to eq("1")
+    expect(book.id).to eq("1001")
   end
 
   it 'has a title' do
@@ -33,7 +33,7 @@ describe 'Book' do
   end
 
   it 'has quantity' do
-    expect(book.count).to eq(24)
+    expect(book.quantity).to eq(24)
   end
 
   it 'has an isbn' do

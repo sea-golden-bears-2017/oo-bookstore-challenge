@@ -1,12 +1,12 @@
 class BookStore
-  
-  attr_reader :books, :employees, :opening_time, :closing_time
+
+  attr_reader :books, :employees, :opening_time, :closing_time, :revenue, :sections
 
   def initialize(args)
     @books = args[:books]
     @hours = args[:hours]
     @employees = args[:employees]
-    @sections = args[:sections]
+  
     @revenue = args[:revenue]
     @opening_time = args[:opening_time]
     @closing_time = args[:closing_time]
@@ -27,5 +27,9 @@ class BookStore
 
   def open?
     true
+  end
+
+  def section?(genre)
+    @sections.include?(genre)
   end
 end

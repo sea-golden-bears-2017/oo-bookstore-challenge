@@ -1,14 +1,14 @@
-class Book
-  attr_reader :id, :title, :author, :price, :genre, :isbn
-  attr_accessor :count
+require_relative 'product'
+class Book < Product
+  attr_reader :title, :author, :genre, :isbn, :publisher, :format
 
   def initialize(args)
-    @id = args[:id]
+    super
     @title = args[:title]
     @author = args[:author]
-    @price = args[:price]
-    @count = args[:count]
     @genre = args[:genre]
     @isbn = args[:isbn]
+    @publisher = args[:publisher]
+    @format = args[:format]
   end
 end
