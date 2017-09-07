@@ -1,4 +1,4 @@
-require_relative 'book'
+require_relative 'book' 
 
 class BookStore
   attr_reader :books, :employees, :revenue, :register
@@ -18,6 +18,9 @@ class BookStore
     @employees << employee
   end
 
+  def fire(id)
+    @employees.delete(@employees.find { |e| e.id == id })
+  end
 
 
 end
