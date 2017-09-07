@@ -2,14 +2,14 @@ require 'rspec'
 require_relative '../employee.rb'
 
 describe Employee do
-  let(:employee) { Employee.new({id: 1, name: "Anna Jeszeck", position: "Sales Assistant", wage: 15, hours: 40, hire_date: "1-1-2017", fire_date: "1-2-2017", ssn: "123-45-6789", auth_level: "Level 1"}) }
+  let(:employee) { Employee.new({id: 1, full_name: "Anna Jeszeck", position: "Sales Assistant", wage: 15, hours: 40, hire_date: "1-1-2017", fire_date: "1-2-2017", ssn: "123-45-6789", auth_level: "Level 1"}) }
 
   describe "employee attributes"
     it "has an ID" do
       expect(employee.id).to eq(1)
     end
     it "has a name" do
-      expect(employee.name).to eq("Anna Jeszeck")
+      expect(employee.full_name).to eq("Anna Jeszeck")
     end
     it "has a position" do
       expect(employee.position).to eq("Sales Assistant")
@@ -32,6 +32,4 @@ describe Employee do
     it "has an authority level" do
       expect(employee.auth_level).to eq("Level 1")
     end
-
-
 end
