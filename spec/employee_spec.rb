@@ -50,6 +50,12 @@ describe Employee do
       expect(our_cool_bookstore.employees[0]).to be_an_instance_of(Employee)
     end
 
+    it 'terminates an employee' do
+      our_cool_bookstore.hire(worker)
+      our_cool_bookstore.fire(worker.id)
+      expect(worker.term_date).to eq "09/07/2017" 
+    end
+
   end #context end
  end
 end #end employee class tests

@@ -1,3 +1,5 @@
+require 'date'
+
 class BookStore
   attr_reader :hours, :books, :sections, :employees, :revenue
   attr_accessor :is_open
@@ -24,9 +26,8 @@ class BookStore
     self.employees << new_employee
   end
 
-  def fire(employee)
-    # when declaring the employee class make sure to access the employees using id
-    # remember that employee information will be in held of a hash hash[:symbol]
-
+  def fire(employee_id)
+    terminated_employee = @employees.select { |emp_obj| emp_obj.id == employee_id }
+    terminated_employee[0].term_date = Time.now.strftime("%m/%d/%Y")
   end
 end
