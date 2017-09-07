@@ -3,7 +3,7 @@ require_relative '../employee.rb'
 require 'faker'
 
 describe Employee do
-  let(:employee) { Employee.new({id: 1, full_name: Faker::TwinPeaks.character, position: Faker::Job.title, wage: Faker::Number.decimal(2), hours: Faker::Number.number(2), hire_date: Date.today, fire_date: Faker::Date.forward(200), ssn: "123-45-6789", auth_level: "Level 1"}) }
+  let(:employee) { Employee.new({id: 1, full_name: Faker::TwinPeaks.character, position: Faker::Job.title, wage: Faker::Number.decimal(2), hours: Faker::Number.number(2), hire_date: Date.today, fire_date: Faker::Date.forward(200), ssn: '345-27-8765', auth_level: "Level #{Random.rand(10)}"}) }
 
   describe "employee attributes"
     it "has an ID" do
@@ -28,9 +28,9 @@ describe Employee do
       expect(employee.fire_date).to eq(employee.fire_date)
     end
     it "has a SSN" do
-      expect(employee.ssn).to eq("123-45-6789")
+      expect(employee.ssn).to eq(employee.ssn)
     end
     it "has an authority level" do
-      expect(employee.auth_level).to eq("Level 1")
+      expect(employee.auth_level).to eq(employee.auth_level)
     end
 end
