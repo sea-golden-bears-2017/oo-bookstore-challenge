@@ -47,4 +47,8 @@ describe BookStore do
     expect(is_book).to be_truthy
   end
 
+  it 'parses csv file into array of hashes' do
+    expect(bookstore.parse_csv('invoice.csv')).to_not eq([])
+  end
+
 end
