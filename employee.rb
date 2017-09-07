@@ -1,4 +1,7 @@
 class Employee
+  attr_reader :id, :ssn, :hire_date
+  attr_accessor :name, :position, :wage, :term_date, :auth_level, :on_shift
+
   def initialize(emp_data)
     @id = emp_data[:id]
     @name = emp_data[:name]

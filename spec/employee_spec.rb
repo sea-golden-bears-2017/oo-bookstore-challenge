@@ -26,7 +26,7 @@ describe Employee do
     end
 
     it "has a term_date" do
-      expect(worker.term_date).to eq nil
+      expect(worker.term_date).to eq ""
     end
 
     it "has a ssn" do
@@ -38,7 +38,7 @@ describe Employee do
     end
 
     it "on shift" do
-      expect(worker.on_shift).to eq true
+      expect(worker.on_shift).to eq false
     end
 
   end
