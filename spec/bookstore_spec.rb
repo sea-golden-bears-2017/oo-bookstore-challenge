@@ -17,7 +17,7 @@ describe BookStore do
     end
 
     it 'has employees' do
-      bookstore.add_employee(employee)
+      bookstore.hire(employee)
       expect(bookstore.employees.empty?).to eq(false)
     end
 
@@ -28,20 +28,38 @@ describe BookStore do
     it 'has a register' do
       expect(bookstore.register).to be_an_instance_of CashRegister
     end
+
+    it "has is_open" do
+      expect(bookstore.is_open).to eq true
+    end
   end
 
   context 'methods' do
 
-  describe 'fire' do
-    xit 'finds an employees id' do
-
+  describe "open" do
+    it "opens the store" do
+      bookstore.open
+      expect(bookstore.is_open).to eq true
     end
+  end
+
+  describe "close" do
+    it "closes the store" do
+      bookstore.close
+      expect(bookstore.is_open).to eq false
+    end
+  end
+
+  describe 'fire' do
     it  'deletes employee at id' do
-      employee_2 = bookstore.add_employee(Employee.new(2))
+      employee_2 = bookstore.hire(Employee.new(2))
       bookstore.fire(2)
       employee_array = bookstore.employees
       expect(employee_array).not_to include(employee_2)
     end
   end
+
+
+
   end
 end

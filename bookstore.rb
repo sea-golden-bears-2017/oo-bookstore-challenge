@@ -1,20 +1,23 @@
-require_relative 'book' 
+require_relative 'book'
 
 class BookStore
-  attr_reader :books, :employees, :revenue, :register
+  attr_reader :books, :employees, :revenue, :register, :is_open
 
   def initialize
     @books = []
     @employees = []
     @revenue = 1.0
     @register = CashRegister.new
+    @hours = ''
+    @sections = ''
+    @is_open = true
   end
 
   def add_book(book)
     @books << book
   end
 
-  def add_employee(employee)
+  def hire(employee)
     @employees << employee
   end
 
@@ -22,7 +25,13 @@ class BookStore
     @employees.delete(@employees.find { |e| e.id == id })
   end
 
+  def open
+    @is_open = true
+  end
 
+  def close
+    @is_open = false
+  end
 end
 
 
