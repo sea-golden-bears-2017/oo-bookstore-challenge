@@ -3,23 +3,41 @@ require_relative '../bookstore'
 
 describe BookStore do
   let(:bookstore) { BookStore.new }
+  describe "attributes" do
 
-  describe "bookstore methods"
     describe "#closed" do
       it "is bookstore closed?" do
         expect(bookstore.closed).to eq(true)
       end
     end
-    it "Can the bookstore close?" do
-      expect(bookstore.close).to eq(@closed == true)
+  end
+
+  describe "methods" do
+
+    describe "#close" do
+      it "Can the bookstore close?" do
+        bookstore.close
+        expect(bookstore.closed).to eq(true)
+      end
     end
 
-    it "Can the bookstore open?" do
-      expect(bookstore.opens).to eq(@closed == false)
+    describe "#open" do
+      it "Can the bookstore open?" do
+        expect(bookstore.opens).to eq(@closed == false)
+      end
     end
 
-    it "Hours are posted when requested" do
-      expect(bookstore.hours("tuesday")).to eq("8am - 4pm")
+    describe "#hours" do
+      it "Hours are posted when requested" do
+        expect(bookstore.hours("tuesday")).to eq("8am - 4pm")
+      end
     end
 
+    describe "#purchase" do
+      it "purchases book (adds books to book_array)" do
+        bookstore.purchase()
+        expect(bookstore.books_array.length).to_not eq(0)
+      end
+    end
+  end
 end

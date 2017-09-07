@@ -1,7 +1,11 @@
+require 'csv'
+
 class BookStore
  attr_reader :closed, :store_hours
+ attr_accessor :books_array
 
   def initialize
+    @books_array = []
     @closed = true
     @store_hours = {
       monday: "8am - 5pm",
@@ -26,8 +30,12 @@ class BookStore
     @store_hours[sym]
   end
 
-  def purchase
-
+  def purchase(file_name)
+    CSV.foreach('file_name', :headers => true) do |row|
+      hash_row = row.to_h
+      book = Book.new(hash_row)
+      @books_array << book
+    end
   end
 
 end
