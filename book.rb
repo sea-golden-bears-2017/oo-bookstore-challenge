@@ -21,6 +21,9 @@ class Book
 
   def reduce(num=1)
     @quantity -= num
+    if @quantity < 0
+      @quantity = 0
+    end
   end
 
   def increase(num=1)

@@ -19,4 +19,8 @@ class CashRegister
   def return(book, inventory)
     @till = pos_return(book, inventory, @till)
   end
+
+  def cash_drop(amount)
+    @till += amount
+  end
 end

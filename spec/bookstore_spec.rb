@@ -57,4 +57,16 @@ describe BookStore do
     book_store.fire(employee)
     expect(book_store.employees).to eq({})
   end
+
+  it "has a cash register" do
+    expect(book_store.cash_register).to_not eq(nil)
+  end
+
+  it "the cash register has a till" do
+    expect(book_store.cash_register.till).to eq(200)
+  end
+
+  it "cash register demonstrates the same functionality as class" do
+    expect {book_store.cash_register.cash_drop(40)}.to_not raise_error
+  end
 end

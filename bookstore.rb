@@ -1,5 +1,8 @@
+require_relative "cash_register"
+require_relative "book"
+
 class BookStore
-  attr_reader :hours, :sections, :employees, :open, :revenue
+  attr_reader :hours, :sections, :employees, :open, :revenue, :cash_register
   attr_accessor :books_inventory
 
   def initialize(options)
@@ -9,6 +12,7 @@ class BookStore
     @employees = {}
     @open = false
     @revenue = 0
+    @cash_register = CashRegister.new(200)
   end
 
   def open?

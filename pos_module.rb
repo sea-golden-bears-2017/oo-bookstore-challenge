@@ -5,7 +5,11 @@ module PointOfSale
   end
 
   def pos_purchase(book, inventory, till)
-    inventory[book.isbn].increase
+    if !inventory.include?(book)
+      inventory.store(book.isbn, book)
+    else
+      inventory[book.isbn].increase
+    end
     till - book.price
   end
 

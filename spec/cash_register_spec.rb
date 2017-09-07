@@ -62,7 +62,13 @@ let (:cash_register) { CashRegister.new(300) }
     cash_register.sell(book, book_store.books_inventory)
     expect(cash_register.till).to eq(300 + (12.50 * 0.85))
   end
-  # it "can drop cash after a sale" do
-  #
-  # end
+
+  it "can drop cash after a sale" do
+    cash_register.cash_drop(100)
+    expect(cash_register.till).to eq(400)
+  end
+
+  it "can purchase new books" do
+    expect {cash_register.purchase(book, book_store.books_inventory)}.to_not raise_error
+  end
 end
