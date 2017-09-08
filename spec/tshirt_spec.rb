@@ -76,5 +76,14 @@ describe Tshirt do
         expect(other_shirt.find_discount(other_shirt.condition)).to eq 0.5
       end
     end
+
+    describe "#set_discount_price" do
+      it 'update the price attribute' do
+        other_shirt.condition = 'okay'
+        other_shirt.set_discount_price(other_shirt.condition, other_shirt.price)
+        expect(other_shirt.price).to eq 12.5
+      end
+
+    end
   end
 end

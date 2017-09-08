@@ -30,4 +30,8 @@ class Tshirt < Product
     price - (price * discount)
   end
 
+  def set_discount_price(condition, price)
+    @price = appraise(condition, price)
+  end
+
 end
