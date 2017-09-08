@@ -1,9 +1,9 @@
 module Appraisable
   def appraise
-    @cost
+    cost
   end
 
   def reject?
-    @cost < @price
+    cost < price
   end
 end

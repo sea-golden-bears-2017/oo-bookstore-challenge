@@ -76,4 +76,26 @@ let (:cash_register) { CashRegister.new(300) }
       cash_register.purchase(book, book_store.books_inventory, worker)
     end.to_not raise_error
   end
+
+  it "will have a transaction log" do
+    expect(cash_register.transaction_log.empty?).to be true
+  end
+
+  context "stores transactions in the transaction log" do
+    it "transaction log stores the last transaction id after a sale" do
+      book_store.books_inventory = {book.isbn => book}
+      transaction = cash_register.sell(book, book_store.books_inventory, worker)
+      expect(cash_register.transaction_log.has_key?(transaction.id)).to be true
+    end
+
+    it "stores the last transaction id after a purchase" do
+      transaction = cash_register.purchase(book, book_store.books_inventory, worker)
+      expect(cash_register.transaction_log.has_key?(transaction.id)).to be true
+    end
+
+    it "stores the last transaction id after a return" do
+      transaction = cash_register.return(book, book_store.books_inventory, worker)
+      expect(cash_register.transaction_log.has_key?(transaction.id)).to be true
+    end
+  end
 end
