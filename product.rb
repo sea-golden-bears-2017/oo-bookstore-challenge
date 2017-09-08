@@ -1,8 +1,8 @@
 class Product
 
-  def initialize(id, price, count)
-    @id = id
-    @price = price
-    @count = count
+  def initialize(options)
+    @id = options[:id]
+    @price = options[:price]
+    @count = options[:count]
   end
 end

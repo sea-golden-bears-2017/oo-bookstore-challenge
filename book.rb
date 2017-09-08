@@ -5,7 +5,7 @@ class Book < Product
   attr_accessor :count
 
   def initialize(args)
-    super(args[:id], args[:price], args[:count])
+    super({id: args[:id], count: args[:count], price: args[:price]})
     @title = args[:title]
     @author = args[:author]
     @genre = args[:genre]

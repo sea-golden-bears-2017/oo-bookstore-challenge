@@ -9,7 +9,7 @@ describe 'Book' do
     genre: 'Mythopoeia',
     price: 10.37,
     count: 24,
-    isbn: '0-278-814673-6'
+    isbn: '0-278-814673-6',
     })}
 
   it 'has an id' do
@@ -39,6 +39,5 @@ describe 'Book' do
   it 'has an isbn' do
     expect(book.isbn).to eq("0-278-814673-6")
   end
-
 
 end

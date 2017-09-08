@@ -4,7 +4,7 @@ class Coffee < Product
   attr_reader :id, :price, :count, :roast
 
   def initialize(args)
-    super(args[:id], args[:price], args[:count])
+    super({id: args[:id], count: args[:count], price: args[:price]})
     @roast = args[:roast]
   end
 end

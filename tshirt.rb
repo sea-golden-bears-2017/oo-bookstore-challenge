@@ -4,7 +4,7 @@ class Tshirt < Product
   attr_reader :id, :price, :count, :size
 
   def initialize(args)
-    super(args[:id], args[:price], args[:count])
+    super({id: args[:id], count: args[:count], price: args[:price]})
     @size = args[:size]
   end
 end
