@@ -19,15 +19,17 @@ describe CashRegister do
 
   describe 'methods' do
     describe '#sell' do
-      it 'creates a new transaction object' do
+      xit 'creates a new transaction object' do
         cash_register.sell()
         expect(cash_register.transactions.length).to eq [1]
         # add a transaction(receipt) with transaction_type of 'sell'
       end
   end
 
-    xit '#buy' do
-      # Something like if we have enough money in the till we will buy the book
+  describe '#buy'
+    it 'returns true if condition is mint of near mint' do
+      book.condition = "mint"
+      expect(cash_register.buy(book)).to eq(true)
     end
 
     xit '#return' do
