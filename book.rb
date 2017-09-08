@@ -5,7 +5,6 @@ class Book < Product
 
   def initialize(book_hash)
     super
-    @id = book_hash[:id]
     @title = book_hash[:title]
     @author = book_hash[:author]
     @genre = book_hash[:genre]
