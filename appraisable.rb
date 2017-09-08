@@ -5,7 +5,7 @@ module Appraisable
     [true, false].sample
   end
 
-  def appraise(item)
+  def appraise
+    (5..30).to_a.sample
   end
-
 end
