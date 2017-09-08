@@ -9,7 +9,7 @@ class CashRegister
 
   def initialize(cash)
     @till = cash
-    @transactions = {}
+    @transactions = []
   end
 
   def make_sale(item)
