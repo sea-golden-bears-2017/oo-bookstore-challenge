@@ -15,9 +15,8 @@ describe RoboLibrarian do
     end
   end
   describe '.get_books' do
-    it 'sends books collection to the view class' do
-      p controller
-      # controller.model.all
+    it 'returns the books collection' do
+      expect(controller.get_books).to eq(book.all)
     end
   end
 end

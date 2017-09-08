@@ -7,4 +7,8 @@ class RoboLibrarian
     @book = book
     @view = view
   end
+
+  def get_books
+    @book.all
+  end
 end
