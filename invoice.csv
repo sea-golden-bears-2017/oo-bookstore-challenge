@@ -1,0 +1,101 @@
+id,title,author,genre,price,count,isbn
+1,The Parliament of Man,Prudence Kshlerin,Fiction narrative,23.27,30,0-855-720408-6
+2,Arms and the Man,Annamarie Schroeder,Realistic fiction,65.17,14,0-260-162800-5
+3,Beyond the Mexique Bay,Brenden Farrell,Comic/Graphic Novel,97.95,7,0-797-481474-3
+4,Eyeless in Gaza,Chaim Morar,Metafiction,26.8,16,0-896-970823-4
+5,Postern of Fate,Adrienne Hoppe,Western,39.27,7,0-432-140166-9
+6,An Evil Cradling,Dakota Gibson Jr.,Fantasy,41.78,9,0-181-663392-2
+7,An Instant In The Wind,Elza Marquardt,Humor,59.41,19,0-321-288186-8
+8,"Absalom, Absalom!",Willie Block,Mystery,34.66,3,0-370-597684-7
+9,Dying of the Light,Orin Crooks,Western,4.45,4,0-518-120506-8
+10,Jesting Pilate,Alejandra Lindgren,Historical fiction,18.26,8,0-909-128865-7
+11,Wildfire at Midnight,Mayra Orn,Mythology,78.36,8,0-532-509140-2
+12,"The World, the Flesh and the Devil",Amanda Reinger,Textbook,1.03,10,0-570-640772-1
+13,Wildfire at Midnight,Megane Nitzsche,Mythology,13.75,15,0-886-854582-5
+14,I Know Why the Caged Bird Sings,Lourdes Hermann,Mythology,54.09,19,0-194-403581-3
+15,Time of our Darkness,Zora McGlynn,Fable,78.89,14,0-870-487420-9
+16,All the King's Men,Ashly Dare,Fairy tale,44.72,16,0-109-790424-4
+17,Now Sleeps the Crimson Petal,Jaycee Treutel,Humor,95.47,25,0-548-949929-4
+18,I Know Why the Caged Bird Sings,Santino Sawayn II,Fiction narrative,50.29,25,0-319-783870-6
+19,Blood's a Rover,Hillary Lakin,Mystery,62.45,11,0-110-138943-7
+20,The Painted Veil,Darion Beatty,Fiction narrative,16.33,5,0-732-955705-6
+21,"Look Homeward, Angel",Helmer Breitenberg,Fiction narrative,52.47,8,0-138-805913-8
+22,This Side of Paradise,Gabriella Eichmann V,Mythology,95.65,20,0-273-534495-1
+23,O Pioneers!,Aniya Dooley II,Tall tale,64.22,3,0-524-901843-5
+24,The Grapes of Wrath,Marcel Reichert,Science fiction,70.77,11,0-293-238894-8
+25,The Daffodil Sky,Joey McKenzie,Narrative nonfiction,33.26,26,0-765-673945-7
+26,Fame Is the Spur,Lora Hansen,Short story,34.45,24,0-299-270952-1
+27,Nectar in a Sieve,Ms. Lurline Heaney,Mythology,42.31,12,0-756-368654-5
+28,Taming a Sea Horse,Mitchell O'Keefe,Textbook,39.72,25,0-368-927939-4
+29,Antic Hay,Joanie Langworth,Legend,88.99,23,0-147-964639-9
+30,In a Dry Season,Mrs. Kaylin Kerluke,Comic/Graphic Novel,19.05,20,0-558-711792-2
+31,Wildfire at Midnight,Idell Dare,Suspense/Thriller,36.62,12,0-434-548702-9
+32,The Sun Also Rises,Harry Becker,Narrative nonfiction,44.76,27,0-426-621686-9
+33,Recalled to Life,Bernard Walter,Mystery,51.03,7,0-323-625816-9
+34,Fame Is the Spur,Timmy Blick,Fiction in verse,80.18,29,0-409-740809-8
+35,O Pioneers!,Ms. Terrance Cole,Short story,39.35,25,0-945-622841-6
+36,From Here to Eternity,Barney Bins,Metafiction,42.44,6,0-384-144928-2
+37,The Wealth of Nations,Regan Gutmann,Mythopoeia,88.22,5,0-249-696914-6
+38,Endless Night,Brigitte Rolfson,Fanfiction,26.98,16,0-500-521742-4
+39,Time To Murder And Create,Arnold Torphy,Horror,13.77,9,0-279-498657-1
+40,Let Us Now Praise Famous Men,Dr. Oda Koepp,Folklore,61.56,6,0-381-681164-1
+41,The Mermaids Singing,Ida Gleason,Legend,37.82,6,0-475-322009-2
+42,No Highway,Johanna Quitzon,Comic/Graphic Novel,70.51,21,0-598-531804-1
+43,After Many a Summer Dies the Swan,Mariela Blanda,Mystery,29.92,5,0-497-528604-0
+44,When the Green Woods Laugh,Vance Metz,Mythopoeia,32.04,15,0-989-106450-6
+45,A Confederacy of Dunces,Miss Maci Herzog,Mythology,89.33,30,0-442-700329-6
+46,The Moon by Night,Ernestine DuBuque,Horror,60.89,9,0-682-190876-8
+47,Of Human Bondage,Ms. Florence Crooks,Mythology,86.1,30,0-240-532502-6
+48,A Passage to India,Vincenzo Shanahan,Western,8.42,23,0-992-105202-0
+49,Time of our Darkness,Anita Wiegand IV,Realistic fiction,41.23,22,0-745-171698-7
+50,Time of our Darkness,Dell Kuphal,Comic/Graphic Novel,67.22,5,0-882-126608-2
+51,The Line of Beauty,Roy Sanford,Mythopoeia,95.67,29,0-222-219221-0
+52,The Green Bay Tree,Karolann Crona,Fiction in verse,26.32,16,0-772-602028-3
+53,The Last Enemy,Clement Veum,Comic/Graphic Novel,38.79,18,0-105-898387-0
+54,For Whom the Bell Tolls,Bruce Boyer,Fable,45.16,17,0-339-473964-7
+55,The Moon by Night,Charlene Bins,Fairy tale,36.51,27,0-719-970272-1
+56,The Torment of Others,Greg Heller,Fable,39.21,30,0-963-397773-3
+57,Clouds of Witness,Elmer Bosco,Mythopoeia,54.89,4,0-839-855911-2
+58,Recalled to Life,Lurline Yost,Comic/Graphic Novel,5.13,20,0-109-671183-3
+59,Ring of Bright Water,Grace Corkery,Western,79.13,19,0-910-534333-2
+60,The Man Within,Marquis Lemke,Crime/Detective,20.01,1,0-936-158611-0
+61,The Moon by Night,Anais Russel,Crime/Detective,15.12,22,0-339-304893-1
+62,O Pioneers!,Darion Herzog,Metafiction,10.46,21,0-987-308340-0
+63,The Daffodil Sky,Mr. Melyna Mitchell,Crime/Detective,16.59,24,0-823-252689-5
+64,Terrible Swift Sword,Emory Boyer,Fanfiction,45.63,28,0-760-894731-1
+65,The Parliament of Man,Torrance Mann DDS,Fiction narrative,40.21,8,0-889-262664-8
+66,The Stars' Tennis Balls,Kristofer Goyette,Western,5.6,28,0-385-145029-1
+67,The Other Side of Silence,Alvena Koss,Biography/Autobiography,13.6,30,0-935-827208-0
+68,The Moon by Night,Mayra McGlynn IV,Fable,10.32,4,0-944-539708-0
+69,Time of our Darkness,Ryleigh Ortiz,Mythology,81.92,6,0-543-292077-6
+70,Carrion Comfort,Leila Stiedemann,Historical fiction,56.56,28,0-522-367318-8
+71,From Here to Eternity,Alexanne Borer,Legend,80.0,26,0-773-778966-7
+72,Mother Night,Duane Davis,Fiction narrative,59.49,10,0-916-222179-1
+73,In a Dry Season,Sincere Hauck,Classic,79.22,2,0-120-682417-2
+74,The Moving Finger,Roberto Stiedemann,Narrative nonfiction,15.31,6,0-340-151878-5
+75,Jacob Have I Loved,Orion Franecki DDS,Science fiction,85.46,21,0-159-114840-9
+76,Everything is Illuminated,Jazlyn O'Kon,Western,77.28,24,0-201-316184-3
+77,If I Forget Thee Jerusalem,Darien Kovacek,Speech,32.82,27,0-889-277008-9
+78,All the King's Men,Kiel Nienow,Classic,25.5,16,0-186-117155-2
+79,From Here to Eternity,Heather Spinka,Fairy tale,62.37,1,0-689-957525-6
+80,Dulce et Decorum Est,Ms. Wyman Sawayn,Essay,52.82,26,0-823-277521-1
+81,To a God Unknown,Sallie Mohr,Classic,55.64,11,0-813-120655-8
+82,Beyond the Mexique Bay,Kimberly King MD,Biography/Autobiography,65.76,28,0-109-338961-7
+83,Consider the Lilies,Freddy Jerde III,Metafiction,77.68,3,0-117-209001-3
+84,From Here to Eternity,Priscilla Harris,Fantasy,75.86,9,0-793-926407-5
+85,The Wives of Bath,Richie Huel,Textbook,77.63,27,0-759-636344-4
+86,The Last Temptation,Kathryne Mills,Legend,97.55,18,0-807-413763-0
+87,Rosemary Sutcliff,Amelia Monahan DVM,Textbook,8.82,16,0-646-718218-0
+88,For a Breath I Tarry,Karianne Johnston PhD,Speech,25.85,30,0-370-301845-6
+89,Butter In a Lordly Dish,Dewayne O'Conner,Western,75.89,29,0-782-140145-3
+90,The Moving Finger,Meda Bednar V,Classic,61.16,24,0-235-331385-9
+91,An Acceptable Time,Susanna Schiller,Narrative nonfiction,61.11,3,0-299-145688-4
+92,Postern of Fate,Neva Gutmann,Reference book,48.0,23,0-556-543231-1
+93,The Heart Is a Lonely Hunter,Dr. Abner Reichert,Classic,9.88,5,0-428-323446-1
+94,The Daffodil Sky,Loyal Zboncak,Humor,57.9,11,0-904-372871-4
+95,Nectar in a Sieve,Ashley Stracke,Fantasy,81.12,4,0-484-767461-7
+96,An Acceptable Time,Hassan Parisian,Legend,50.08,19,0-818-665117-6
+97,The Monkey's Raincoat,Eunice Balistreri,Humor,39.37,26,0-473-543886-4
+98,The Curious Incident of the Dog in the Night-Time,Cory Spencer,Speech,88.65,8,0-106-592450-7
+99,The House of Mirth,Dr. Lucy MacGyver,Folklore,71.13,8,0-235-537168-8
+100,Great Work of Time,Meaghan Thompson Sr.,Essay,39.3,15,0-864-845995-5
