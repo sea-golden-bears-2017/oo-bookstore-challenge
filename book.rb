@@ -1,6 +1,9 @@
 require_relative "product.rb"
+require_relative 'appraisable'
 
 class Book < Product
+  
+  include Appraisable
   attr_reader :id, :title, :author, :genre,  :isbn
 
   def initialize(book_hash)
