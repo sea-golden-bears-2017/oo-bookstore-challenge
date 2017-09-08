@@ -33,7 +33,7 @@ class BookStore
     @store_hours[sym]
   end
 
-  def purchase(file_name)
+  def load_stock(file_name)
     CSV.foreach(file_name, :headers => true, :header_converters => :symbol) do |row|
       hash_row = row.to_h
       book = Book.new(hash_row)
@@ -43,7 +43,7 @@ class BookStore
   end
 
   def hire(num_hires)
-    Employee.new()
+    num_hires.times { @employees << Employee.new }
   end
 
 end
