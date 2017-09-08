@@ -3,7 +3,8 @@ require_relative 'appraisable'
 
 class CashRegister
   include Appraisable
-  attr_reader :till, :transactions
+  attr_reader :transactions
+  attr_accessor :till
 
 
   def initialize
@@ -19,9 +20,11 @@ class CashRegister
 
   def buy(book)
     if reject(book) == true
-      appraise(book)
+      percent = appraise(book)
+      @till -= (book.price * percent)
     else
       puts "Book is too old."
+    end
   end
 end
 
