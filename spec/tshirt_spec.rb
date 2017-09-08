@@ -17,7 +17,6 @@ let(:tshirt) {TShirt.new(args)}
     expect(tshirt.manufacturer).to eq("champion")
   end
 
-
   it 'has a design' do
     expect(tshirt.design).to eq("bookstore logo")
   end

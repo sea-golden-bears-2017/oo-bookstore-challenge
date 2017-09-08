@@ -11,4 +11,12 @@ attr_accessor :id
     @condition = args[:condition]
   end
 
+  def record_sale(id, qty)
+    sold_item(qty)
+  end
+
+  protected
+  def sold_item(qty)
+    @quantity -= qty
+  end
 end
