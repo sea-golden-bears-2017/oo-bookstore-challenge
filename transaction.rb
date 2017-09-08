@@ -3,7 +3,7 @@ class Transaction
 
   # id
   # items
-  # charge
+  # charge (total that the customer paid)
   # employee_id
   # cash
   # change
