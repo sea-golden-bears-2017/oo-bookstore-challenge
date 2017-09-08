@@ -14,9 +14,15 @@ describe RoboLibrarian do
       expect(controller.view).to eq(view)
     end
   end
-  describe '.get_books' do
+  describe '#get_books' do
     it 'returns the books collection' do
       expect(controller.get_books).to eq(book.all)
+    end
+  end
+  describe '#direct' do
+    it 'when given an input of "1" calls the show all method of the view' do
+      expect(view).to receive(:show_all).with(controller.get_books)
+      controller.direct('1')
     end
   end
 end
