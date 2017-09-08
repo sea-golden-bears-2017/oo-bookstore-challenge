@@ -6,12 +6,16 @@ describe BookStore do
   let(:book_hash) {{:id => "1",:title => "After Many a Summer Dies the Swan", :author => "Mustafa Mayer MD", :genre => "Fairy tale", :price => "83.42", :count => "17", :isbn => "0-194-607033-0"}}
   let(:book) { Book.new(book_hash) }
   let(:employee) { Employee.new }
-  let(:transaction) { Transaction.new }
+  let(:transaction) { Transaction.new({}) }
   let(:bookstore) { BookStore.new }
 
   it 'has books' do
     bookstore.add_book(book)
     expect(bookstore.books.empty?).to eq(false)
+  end
+
+  it 'has discount' do
+    expect(bookstore.discount).to be_nil
   end
 
   it 'returns a book'
@@ -50,5 +54,22 @@ describe BookStore do
   xit 'parses csv file into array of hashes (PRIVATE NOW)' do
     expect(bookstore.parse_csv('invoice.csv')).to_not eq([])
   end
+
+  describe '#determine_discount' do
+    # context 'stuff' do
+      it 'determines discount percentage given an object' do
+        bookstore.discount = Proc.new do |product|
+          if product.genre == "Biography/Autobiography"
+            0.2
+          else
+            0
+          end
+        end
+        this_book = bookstore.books[0]
+        expect(bookstore.determine_discount(this_book)).to eq 0.2
+      end
+    # end
+  end
+
 
 end

@@ -1,4 +1,18 @@
 class Transaction
+
+  def initialize(arguments)
+    @id = arguments[:id]
+    @employee_id = arguments[:employee_id]
+    @transaction_type = arguments[:transaction_type]
+    @cash = arguments[:cash]
+    @count = arguments[:count]
+    @change = arguments[:change]
+    @revenue = arguments[:revenue]
+  end
+
+
+
+
   #INPUT hash
 
   # id
@@ -8,4 +22,6 @@ class Transaction
   # cash
   # change
   # revenue
+
+
 end

@@ -1,14 +1,21 @@
 require_relative 'book'
+require_relative 'employee'
+require_relative 'transaction'
+require_relative 'discountable'
 require 'csv'
 
 class BookStore
-  attr_reader :books, :employees, :revenue, :transactions
 
+  attr_reader :books, :employees, :revenue, :transactions
+  attr_accessor :discount
+      include Discountable
+      
   def initialize
     @books = []
     @employees = []
     @revenue = 1.0
     @transactions = []
+    @discount = nil
     populate_books
   end
 
