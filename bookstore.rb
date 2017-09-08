@@ -1,7 +1,7 @@
 require 'date'
-
+require_relative "merch.rb"
 class BookStore
-  attr_reader :hours, :books, :sections, :employees, :revenue
+  attr_reader :hours, :books, :sections, :employees, :revenue , :merch, :on_shift_employees
   attr_accessor :is_open
 
   def initialize
@@ -9,8 +9,10 @@ class BookStore
     @books = []
     @sections = []
     @employees = []
+    @on_shift_employees = []
     @revenue = 0
     @is_open = false
+    @merch = []
   end
 
   def open_store
@@ -30,4 +32,12 @@ class BookStore
     terminated_employee = @employees.select { |emp_obj| emp_obj.id == employee_id }
     terminated_employee[0].term_date = Time.now.strftime("%m/%d/%Y")
   end
+
+    def add_merch(merch_hash)
+      @merch << Merch.new(merch_hash)
+    end
+
+    def on_shift?(employee_id)
+      
+    end
 end

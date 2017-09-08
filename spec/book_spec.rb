@@ -40,4 +40,15 @@ describe Book do
   it "has a cost" do
     expect(book.cost).to eq 5.95
   end
+  context "appraisal module" do
+
+
+    it "appraises a book" do
+      expect(book.appraise(7.0,"like-new",book.price)).to eq 5.60
+    end
+
+    it "rejects a book" do
+      expect(book.appraise(book.cost,"like-new",book.price)).to eq "reject"
+    end
+  end
 end

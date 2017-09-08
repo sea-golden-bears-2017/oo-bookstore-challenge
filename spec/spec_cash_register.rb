@@ -12,5 +12,14 @@ describe CashRegister do
       expect(register.till).to eq ({twenty: 5, ten: 10, five: 20, one: 100})
     end
 
+  context "Point of Sale module tests" do
+
+
+    it "appraises a book" do
+
+    end
+
+
+      end
   end
 end

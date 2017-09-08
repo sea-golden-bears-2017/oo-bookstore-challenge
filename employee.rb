@@ -13,4 +13,7 @@ class Employee
     @auth_level = emp_data[:auth_level]
     @on_shift = false
   end
+
+  
+
 end
