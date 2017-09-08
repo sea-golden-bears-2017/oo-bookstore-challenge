@@ -30,6 +30,21 @@ class BookStore
     @transactions << transaction
   end
 
+  def populate_books
+    # Things it needs to do
+    # Takes an array of book_hash(es)
+    # Make new instance of Book
+    # add_book
+    # PIRVATE
+    book_hashes = parse_csv('invoice.csv')
+    book_hashes.each do |hash|
+      add_book(Book.new(hash))
+    end
+  end
+
+end
+
+private
 
 
   def parse_csv(filename)
@@ -45,19 +60,6 @@ class BookStore
     book_hashes
   end
 
-  def populate_books
-    # Things it needs to do
-    # Takes an array of book_hash(es)
-    # Make new instance of Book
-    # add_book
-    # PIRVATE
-    book_hashes = parse_csv('invoice.csv')
-    book_hashes.each do |hash|
-      add_book(Book.new(hash))
-    end
-  end
-
-end
 
 
 

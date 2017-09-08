@@ -19,6 +19,7 @@ describe 'book' do
   end
 
   it 'has a genre' do
+    book.ham
     expect(book.genre).to eq "Fairy tale"
   end
 
