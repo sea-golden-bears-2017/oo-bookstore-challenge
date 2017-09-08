@@ -1,5 +1,6 @@
 require 'rspec'
 require_relative '../cash_register'
+require_relative '../transaction'
 
 describe Transaction do
   describe 'attributes' do
