@@ -11,6 +11,7 @@ class BookStore
     @hours = ''
     @sections = ''
     @is_open = true
+    ## @inventory including books and other products
   end
 
   def add_book(book)
