@@ -3,12 +3,9 @@ class Book
   def initialize(args)
     @id = args[:id]
     @title = args[:title]
+    @@books << self
   end
-
-  def self.add(book)
-    @@books << book
-  end
-
+  
   def self.all
     @@books
   end
