@@ -35,9 +35,9 @@ describe BookStore do
       end
     end
 
-    describe "#purchase" do
+    describe "#load_stock" do
       it "purchases book (adds books to book_array)" do
-        bookstore.purchase('invoice.csv')
+        bookstore.load_stock('invoice.csv')
         expect(bookstore.books_array.length).to_not eq(0)
       end
     end
