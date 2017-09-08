@@ -1,5 +1,6 @@
 require 'rspec'
 require_relative '../tshirt'
+require_relative '../appraise'
 
 describe Tshirt do
   let(:shirt) { Tshirt.new({id: '00798', price: 25, count: 30, size: 'medium'}) }

@@ -1,8 +1,10 @@
 require_relative 'product'
+require_relative 'appraise'
 
 class Tshirt < Product
   attr_reader :id, :price, :count, :size
   attr_accessor :condition
+  include Appraisable
 
   def initialize(args, condition = 'new')
     super({id: args[:id], count: args[:count], price: args[:price]})
@@ -10,28 +12,7 @@ class Tshirt < Product
     @condition = condition
   end
 
-  class InvalidCondition < StandardError
-  end
-
-  def reject?(condition)
-    return true if @condition == 'bad' || @condition == 'new'
-    false
-  end
-
-  def find_discount(condition)
-    return 0.25 if condition == 'good'
-    return 0.5 if condition == 'okay'
-  end
-
-  def appraise(condition, price)
-    raise InvalidCondition if reject?(condition)
-
-    discount = find_discount(condition)
-    price - (price * discount)
-  end
-
   def set_discount_price(condition, price)
     @price = appraise(condition, price)
   end
-
 end
