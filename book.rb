@@ -1,7 +1,8 @@
 require_relative 'product'
 
 class Book < Product
-  attr_reader :id, :title, :author, :genre, :isbn, :condition
+  attr_reader :id, :title, :author, :genre, :isbn
+  attr_accessor :condition
 
   def initialize(hash)
     super(hash)
