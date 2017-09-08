@@ -8,6 +8,9 @@ describe Book do
     it "has an ID" do
       expect(book.id).to eq(7)
     end
+    it "has a condition" do
+      expect(book.condition).to_not be nil
+    end
     it "has a title" do
       expect(book.title).to eq("In a Glass Darkly")
     end
