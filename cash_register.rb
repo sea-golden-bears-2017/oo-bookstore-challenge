@@ -18,7 +18,10 @@ class CashRegister
   # end
 
   def buy(book)
-   reject(book)
+    if reject(book) == true
+      appraise(book)
+    else
+      puts "Book is too old."
   end
 end
 

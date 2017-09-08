@@ -27,9 +27,14 @@ describe CashRegister do
   end
 
   describe '#buy'
-    it 'returns true if condition is mint of near mint' do
-      book.condition = "mint"
-      expect(cash_register.buy(book)).to eq(true)
+    it 'returns true if condition is near mint of near mint' do
+      book.condition = "near mint"
+      expect(cash_register.buy(book)).to eq(0.4)
+    end
+
+    it 'returns 0.5 if condition is mint' do
+      book.condition = 'mint'
+      expect(cash_register.buy(book)).to eq(0.5)
     end
 
     xit '#return' do
