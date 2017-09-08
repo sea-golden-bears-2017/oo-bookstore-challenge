@@ -1,5 +1,6 @@
 require 'rspec'
 require_relative '../cash_register'
+require_relative '../bookstore'
 require_relative '../book'
 
 describe CashRegister do
@@ -17,17 +18,16 @@ describe CashRegister do
   end
 
   describe 'methods' do
-    it '#sell' do
-      cash_register.sell(book.id)
-      expect(cash_register.transactions).to eq [transaction_object]
-    end
+    describe '#sell' do
+      it 'creates a new transaction object' do
+        cash_register.sell()
+        expect(cash_register.transactions.length).to eq [1]
+        # add a transaction(receipt) with transaction_type of 'sell'
+      end
+  end
 
     xit '#buy' do
       # Something like if we have enough money in the till we will buy the book
-    end
-
-    xit '#transaction' do
-      cash_register.transaction()
     end
 
     xit '#return' do
