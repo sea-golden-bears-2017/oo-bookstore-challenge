@@ -9,7 +9,7 @@ class BookStore
   attr_reader :books, :employees, :revenue, :transactions
   attr_accessor :discount
       include Discountable
-      
+
   def initialize
     @books = []
     @employees = []
@@ -38,34 +38,37 @@ class BookStore
   end
 
   def populate_books
-    # Things it needs to do
-    # Takes an array of book_hash(es)
-    # Make new instance of Book
-    # add_book
-    # PIRVATE
     book_hashes = parse_csv('invoice.csv')
     book_hashes.each do |hash|
       add_book(Book.new(hash))
     end
   end
 
-end
+  def update_discount(discount_criteria)
+    attribute = discount_criteria[:attribute]
+    attribute_value = discount_criteria[:attribute_value]
+    discount_percentage = discount_criteria[:discount_percentage]
+    @discount = Proc.new do |product|
+      if product.public_send(attribute) == attribute_value
+        discount_percentage
+      else
+        0
+      end
+    end
+  end
+
+
 
 private
 
-
   def parse_csv(filename)
-    # Start with empty book_hashes array
-    # Iterate line by line through csv (with headers as symbols)
-    # Each line becomes a new hash with headers as keys and line items as values
-    # Stuff array with aforementioned hash
-    # Output book_hashes filled with book hashes
     book_hashes = []
     CSV.foreach(filename, {:headers => true, :header_converters => :symbol}) do |row|
       book_hashes << row.to_hash
     end
     book_hashes
   end
+end
 
 
 

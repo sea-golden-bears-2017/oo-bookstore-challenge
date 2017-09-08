@@ -58,13 +58,7 @@ describe BookStore do
   describe '#determine_discount' do
     # context 'stuff' do
       it 'determines discount percentage given an object' do
-        bookstore.discount = Proc.new do |product|
-          if product.genre == "Biography/Autobiography"
-            0.2
-          else
-            0
-          end
-        end
+        bookstore.update_discount({:attribute => :genre, :attribute_value => "Biography/Autobiography", :discount_percentage => 0.2})
         this_book = bookstore.books[0]
         expect(bookstore.determine_discount(this_book)).to eq 0.2
       end
