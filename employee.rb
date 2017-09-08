@@ -14,3 +14,11 @@ class Employee
   end
 end
 
+# def self.ssn
+#   book_no = "0-"
+#   book_no << Faker::Number.number(3)
+#   book_no << '-'
+#   book_no << Faker::Number.number(2)
+#   book_no << '-'
+#   book_no << Faker::Number.number(4)
+# end
