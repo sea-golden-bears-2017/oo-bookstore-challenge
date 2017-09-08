@@ -1,9 +1,10 @@
 
 
 class Product
-  attr_reader :count, :price, :cost
+  attr_reader :id, :count, :price, :cost
 
   def initialize(arguments)
+    @id = arguments[:id]
     @count = arguments[:count]
     @price = arguments[:price]
     @cost = arguments[:cost]
